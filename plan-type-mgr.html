@@ -18,86 +18,7 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
-<script>
-window.onload = function () {
-    feather.replace();
-}
-function addRow(flag){
-	
-	var htmlText = '';
 
-	if(flag=="1"){
-		htmlText +='<a class="list-group-item list-group-item-action table1"';
-		htmlText +='id="list-profile-list" data-bs-toggle="list"';
-		htmlText +='href="#list-profile" role="tab">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="">';
-		htmlText +='<select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,1)">';
-		htmlText +='<option value="">선택없음</option>';
-		htmlText +='<option value="date">날짜</option>';
-		htmlText +='<option value="datetime">일시</option>';
-		htmlText +='<option value="boolean">여부(Y/N)</option>';
-		htmlText +='<option value="text">문자</option>';
-		htmlText +='<option value="int">숫자</option>';
-		htmlText +='<option value="per">비율</option>';
-		htmlText +='<option value="step">단계</option>';
-		htmlText +='</select>';
-		htmlText +='</a>';
-		$("#list-home-list").parent().after(htmlText);
-	}else if(flag=="2"){
-		htmlText +='<a class="list-group-item list-group-item-action table2"';
-		htmlText +='id="list-profile-list" data-bs-toggle="list"';
-		htmlText +='href="#list-profile" role="tab">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="">';
-		htmlText +='<select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,2)">';
-		htmlText +='<option value="">선택없음</option>';
-		htmlText +='<option value="date">날짜</option>';
-		htmlText +='<option value="datetime">일시</option>';
-		htmlText +='<option value="boolean">여부(Y/N)</option>';
-		htmlText +='<option value="text">문자</option>';
-		htmlText +='<option value="int">숫자</option>';
-		htmlText +='<option value="per">비율</option>';
-		htmlText +='<option value="step">단계</option>';
-		htmlText +='</select>';
-		htmlText +='</a>';
-		$("#list-home-list2").parent().after(htmlText);
-	}else if(flag=="3"){
-		
-	}else if(flag=="4"){
-		
-	}
-}
-
-function deleteRow(flag){
-	var table = $('.table' + flag);
-	if(table.length==1){
-		alert("삭제할 행이 없습니다");
-		return;
-	}
-	table.eq(table.length-1).remove();
-}
-
-function pickSubStep(obj, flag){
-	var value = $(obj).val();
-	if(value=="step"){
-		if(flag=="1"){
-			$('#list-home-list2').children().eq(0).prop("disabled",false);
-			$('#list-home-list2').children().eq(1).prop("disabled",false);
-			$('#minusBtn2').prop("disabled",false);
-			$('#plusBtn2').prop("disabled",false);
-		}else if(flag=="2"){
-			$('#list-home-list3').children().eq(0).prop("disabled",false);
-			$('#list-home-list3').children().eq(1).prop("disabled",false);
-			$('#minusBtn3').prop("disabled",false);
-			$('#plusBtn3').prop("disabled",false);
-		}else if(flag=="3"){
-			
-		}else if(flag=="4"){
-			
-		}
-	}
-}
-
-</script>
 <body>
     <div id="app">
         <div id="sidebar" class="active">
@@ -510,255 +431,356 @@ function pickSubStep(obj, flag){
                                         
                                            	<!-- 1단게 -->
                                             <div class="col-12 col-sm-12 col-md-4">
-                                            	<h5>1단계</h5>
-                                                <div class="list-group" role="tablist">
-                                                    <a class="list-group-item list-group-item-action active table1"
-                                                        id="list-home-list" data-bs-toggle="list" href="#list-home"
-                                                        role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="CEO승인">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                      </a>
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="SKU">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="제품디자인">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="기구설계">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="BOM등록">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="패키지이미지">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="패키지디자인">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="금형제작">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="단가등록">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="패키지양산">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="양산승인">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                                   
-                                                    <a class="list-group-item list-group-item-action table1"
-                                                        id="list-profile-list" data-bs-toggle="list"
-                                                        href="#list-profile" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="초도입고">
-	                                                    <select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,'1')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                    </a>
-                                            </div>
-						          	        <div style="margin-top: 2px;text-align: right;">
-												<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow(1)" ><span class="glyphicon glyphicon-minus">-</span></button>
-									        	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow(1)" ><span class="glyphicon glyphicon-plus">+</span></button>
-							        		</div>
+                                            <h5>1단계</h5>
+						                    <div class="row" id="table-bordered">
+						                        <div class="col-12">
+						                            <div class="card">
+						                                <div class="card-content">
+						                                    <!-- table bordered -->
+						                                    <div class="table-responsive">
+						                                        <table class="table table-bordered mb-0" id="list-home-list1">
+						                                        	<colgroup>
+																		<col width="55%">
+																		<col width="40%">
+																		<col width="15%">
+																	</colgroup>
+						                                            <thead>
+						                                                <tr class="head-color">
+						                                                    <th class="center">항목명</th>
+						                                                    <th class="center">타입</th>
+						                                                    <th class="center">sub</th>
+						                                                </tr>
+						                                            </thead>
+						                                            <tbody>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="CEO승인">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="SKU">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="제품디자인">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="기구설계">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="BOM등록">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="패키지이미지">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="패키지디자인">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="금형제작">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="단가등록">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="패키지양산">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="양산승인">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="초도입고">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                
+						                                                
+						                                            </tbody>
+						                                        </table>
+						                    					<div style="margin-top: 2px;text-align: right;">
+																	<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow(1)" ><span class="glyphicon glyphicon-minus">-</span></button>
+															       	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow(1)" ><span class="glyphicon glyphicon-plus">+</span></button>
+													        	</div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
                                         </div>
                                         
                                         <!-- 2단게 -->
                                         <div class="col-12 col-sm-12 col-md-4">
                                             	<h5>2단계</h5>
-                                                <div class="list-group" role="tablist">
-                                                    <a class="list-group-item list-group-item-action table2" id="list-home-list2" data-bs-toggle="list" href="#list-home" role="tab">
-                                                        <input type="text" class="form-control" id="basicInput2" style="width: 59%; display: inline;" value="" disabled="disabled">
-	                                                    <select class="form-select" name="basicSelect2" style="width: 39%;display: inline;" disabled="disabled"  onchange="pickSubStep(this,'2')">
-	                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                      </a>
-                                            </div>
-  						          	        <div style="margin-top: 2px;text-align: right;">
-												<button type="button" id="minusBtn2" class="btn btn-dark btn-sm" onclick="deleteRow(2)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
-									        	<button type="button" id="plusBtn2" class="btn btn-dark btn-sm" onclick="addRow(2)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
-							        		</div>                                          
+						                    <div class="row" id="table-bordered">
+						                        <div class="col-12">
+						                            <div class="card">
+						                                <div class="card-content">
+						                                    <!-- table bordered -->
+						                                    <div class="table-responsive">
+						                                        <table class="table table-bordered mb-0" id="list-home-list2">
+						                                        	<colgroup>
+																		<col width="55%">
+																		<col width="40%">
+																		<col width="15%">
+																	</colgroup>
+						                                            <thead>
+						                                                <tr class="head-color">
+						                                                    <th class="center">항목명</th>
+						                                                    <th class="center">타입</th>
+						                                                    <th class="center">sub</th>
+						                                                </tr>
+						                                            </thead>
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" name="chk2"  id="basicInput" value="" disabled="disabled">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect2" onchange="pickSubStep(this,'2')" disabled="disabled">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 2)" disabled="disabled"></td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                    					<div style="margin-top: 2px;text-align: right;">
+																	<button type="button" id="minusBtn2" class="btn btn-dark btn-sm" onclick="deleteRow(2)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
+															       	<button type="button" id="plusBtn2" class="btn btn-dark btn-sm" onclick="addRow(2)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+													        	</div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>                                       
                                         </div>
                                         
-                                        <!-- 3단게 -->
+                                       <!-- 3단게 -->
                                         <div class="col-12 col-sm-12 col-md-4">
-                                            	<h5>3단계</h5>
-                                                <div class="list-group" role="tablist">
-                                                    <a class="list-group-item list-group-item-action table3" id="list-home-list3"  data-bs-toggle="list" href="#list-home" role="tab" st>
-                                                        <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="" disabled="disabled">
-	                                                    <select class="form-select" name="basicSelect" style="width: 39%;display: inline;" disabled="disabled"  onchange="pickSubStep(this,'3')">
-		                                                        <option value="">선택없음</option>
-	                                                        <option value="date">날짜</option>
-	                                                        <option value="datetime">일시</option>
-	                                                        <option value="boolean">여부(Y/N)</option>
-	                                                        <option value="text">문자</option>
-	                                                        <option value="int">숫자</option>
-	                                                        <option value="per">비율</option>
-	                                                        <option value="step">단계</option>
-	                                                    </select>
-                                                      </a>
-                                            </div>
-   						          	        <div style="margin-top: 2px;text-align: right;">
-												<button type="button" id="minusBtn3" class="btn btn-dark btn-sm" onclick="deleteRow(3)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
-									        	<button type="button" id="plusBtn3" class="btn btn-dark btn-sm" onclick="addRow(3)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
-							        		</div>                                         
+                                            	<h5>2단계</h5>
+						                    <div class="row" id="table-bordered">
+						                        <div class="col-12">
+						                            <div class="card">
+						                                <div class="card-content">
+						                                    <!-- table bordered -->
+						                                    <div class="table-responsive">
+						                                        <table class="table table-bordered mb-0" id="list-home-list3" >
+						                                        	<colgroup>
+																		<col width="55%">
+																		<col width="40%">
+																		<col width="15%">
+																	</colgroup>
+						                                            <thead>
+						                                                <tr class="head-color">
+						                                                    <th class="center">항목명</th>
+						                                                    <th class="center">타입</th>
+						                                                    <th class="center">sub</th>
+						                                                </tr>
+						                                            </thead>
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="" disabled="disabled">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect3" onchange="pickSubStep(this,'3')" disabled="disabled">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td><input class="form-check-input" type="checkbox" name="chk3" onclick="checkSubStep(this, 3)" disabled="disabled"></td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                    					<div style="margin-top: 2px;text-align: right;">
+																	<button type="button" id="minusBtn3" class="btn btn-dark btn-sm" onclick="deleteRow(3)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
+															       	<button type="button" id="plusBtn3" class="btn btn-dark btn-sm" onclick="addRow(3)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+													        	</div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>                                       
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                       </div>
                     </div>
                 </section>               
                 <!-- List group navigation ends -->
@@ -777,10 +799,209 @@ function pickSubStep(obj, flag){
             </footer>
         </div>
     </div>
+    
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script>
+window.onload = function () {
+    feather.replace();
+}
+function addRow(flag){
+	
+	var htmlText = '';
+
+	if(flag=="1"){
+		htmlText +='<tr>';
+		htmlText +='<td class="text-bold-500">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,1)">';
+		htmlText +='<option value="">선택없음</option>';
+		htmlText +='<option value="date">날짜</option>';
+		htmlText +='<option value="datetime">일시</option>';
+		htmlText +='<option value="boolean">여부(Y/N)</option>';
+		htmlText +='<option value="text">문자</option>';
+		htmlText +='<option value="int">숫자</option>';
+		htmlText +='<option value="per">비율</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
+		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>';
+		htmlText +='</tr>';		
+
+		$("#list-home-list1").append(htmlText);
+	}else if(flag=="2"){
+		htmlText +='<tr onclick="selectRow2(this)">';
+		htmlText +='<td class="text-bold-500">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,2)">';
+		htmlText +='<option value="">선택없음</option>';
+		htmlText +='<option value="date">날짜</option>';
+		htmlText +='<option value="datetime">일시</option>';
+		htmlText +='<option value="boolean">여부(Y/N)</option>';
+		htmlText +='<option value="text">문자</option>';
+		htmlText +='<option value="int">숫자</option>';
+		htmlText +='<option value="per">비율</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
+		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
+		htmlText +='</tr>';		
+
+		$("#list-home-list2").append(htmlText);
+	}else if(flag=="3"){
+		htmlText +='<tr onclick="selectRow3(this)">';
+		htmlText +='<td class="text-bold-500">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,3)">';
+		htmlText +='<option value="">선택없음</option>';
+		htmlText +='<option value="date">날짜</option>';
+		htmlText +='<option value="datetime">일시</option>';
+		htmlText +='<option value="boolean">여부(Y/N)</option>';
+		htmlText +='<option value="text">문자</option>';
+		htmlText +='<option value="int">숫자</option>';
+		htmlText +='<option value="per">비율</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
+		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
+		htmlText +='</tr>';		
+
+		$("#list-home-list3").append(htmlText);
+	}else if(flag=="4"){
+		
+	}
+}
+
+function deleteRow(flag){
+	var table = $('#list-home-list' + flag +" tr");
+	if(table.length<3){
+		alert("삭제할 행이 없습니다");
+		return;
+	}
+	table.eq(table.length-1).remove();
+}
+
+var currentSelector = null;
+function selectRow1(obj){
+
+	$(obj).css('background-color', '#ffffd9');
+	
+	if(currentSelector != null && currentSelector != obj){
+		$(currentSelector).css('background-color','');
+	}
+	currentSelector = obj;
+}	
+
+var currentSelector2 = null;
+function selectRow2(obj){
+
+	$(obj).css('background-color', '#ffffd9');
+	
+	if(currentSelector2 != null && currentSelector2 != obj){
+		$(currentSelector2).css('background-color','');
+	}
+	currentSelector2 = obj;
+	
+}	
+
+var currentSelector3 = null;
+function selectRow3(obj){
+
+	$(obj).css('background-color', '#ffffd9');
+	
+	if(currentSelector3 != null && currentSelector3 != obj){
+		$(currentSelector3).css('background-color','');
+	}
+	currentSelector3 = obj;
+	
+}	
+
+	
+function pickSubStep(obj, flag){
+	var value = $(obj).val();
+	if(value=="step"){
+		if(flag=="1"){
+			$('#list-home-list2').children().eq(0).prop("disabled",false);
+			$('#list-home-list2').children().eq(1).prop("disabled",false);
+			$('#minusBtn2').prop("disabled",false);
+			$('#plusBtn2').prop("disabled",false);
+		}else if(flag=="2"){
+			$('#list-home-list3').children().eq(0).prop("disabled",false);
+			$('#list-home-list3').children().eq(1).prop("disabled",false);
+			$('#minusBtn3').prop("disabled",false);
+			$('#plusBtn3').prop("disabled",false);
+		}else if(flag=="3"){
+			
+		}else if(flag=="4"){
+			
+		}
+	}
+}
+
+function checkSubStep(obj, flag){
+	
+	if($(obj).is(":checked")){
+		if(flag=="1"){
+			console.log();
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",false);
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",false);
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",false);
+			$('#minusBtn2').prop("disabled",false);
+			$('#plusBtn2').prop("disabled",false);
+		}else if(flag=="2"){
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",false);
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",false);
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",false);
+			$('#minusBtn3').prop("disabled",false);
+			$('#plusBtn3').prop("disabled",false);
+		}else if(flag=="3"){
+			
+		}else if(flag=="4"){
+			
+		}
+	}else{
+		
+		if(flag=="1" && $('input[name=chk1]:checked').size()==0){
+			
+			 $('#list-home-list2 tr').each(function(i) {
+				 if(i>1){
+					 this.remove();
+				 }
+			 });
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",true);
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",true);
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",true);
+			$('#minusBtn2').prop("disabled",true);
+			$('#plusBtn2').prop("disabled",true);
+			
+				
+		}else if(flag=="2" && $('input[name=chk2]:checked').size()==0){
+			
+			 $('#list-home-list3 tr').each(function(i) {
+				 if(i>1){
+					 this.remove();
+				 }
+			 });
+			 
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",true);
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",true);
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",true);
+			$('#minusBtn3').prop("disabled",true);
+			$('#plusBtn3').prop("disabled",true);
+		}else if(flag=="3"){
+			
+		}else if(flag=="4"){
+			
+		}
+	}
+}
+
+</script>
 </body>
 
 </html>
