@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     
     <link rel="stylesheet" href="assets/vendors/fontawesome/all.min.css">
-
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
 
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    
 </head>
 
 <body>
@@ -425,8 +426,26 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">* 일정 유형 정보(팀명/프로젝트명)</h4>
+                                    <div class="row" style="margin-left: 10px; margin-top: 20px">
+									<div class="col-sm-4 form-group">
+                                       	 <select class="form-select" >
+                                            <option value="">선택없음</option>
+                                            <option value="">기준정보관리</option>
+                                            <option value="">슈타인하일</option>
+                                            <option value="">파워악세사리</option>
+                                        </select>
+									</div>	
+									<div class="col-sm-4 form-group">
+										<input type="text" class="form-control" id="planName" value="" placeholder="예시) 디자인 프로젝트">
+									</div>	
+                                </div>
+                               	<hr class="line1">
+                                
                                 <div class="card-content">
-                                    <div class="card-body">
+                                <h4 class="card-title">* 유형별 Activities</h4>
+                                    <div class="card-body" style="padding: 1rem">
                                         <div class="row">
                                         
                                            	<!-- 1단게 -->
@@ -471,7 +490,7 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="SKU">
+						                                                        <input type="text" class="form-control" id="basicInput" value="SKU생성">
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
@@ -539,24 +558,7 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="패키지이미지">
-						                                                    </td>
-						                                                    <td>
-						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
-							                                                        <option value="">선택없음</option>
-							                                                        <option value="date">날짜</option>
-							                                                        <option value="datetime">일시</option>
-							                                                        <option value="boolean">여부(Y/N)</option>
-							                                                        <option value="text">문자</option>
-							                                                        <option value="int">숫자</option>
-							                                                        <option value="per">비율</option>
-							                                                    </select>
-						                                                    </td>
-						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
-						                                                </tr>
-						                                                <tr onclick="selectRow1(this)">
-						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="패키지디자인">
+						                                                        <input type="text" class="form-control" id="basicInput" value="패키지">
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
@@ -591,23 +593,6 @@
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
 						                                                        <input type="text" class="form-control" id="basicInput" value="단가등록">
-						                                                    </td>
-						                                                    <td>
-						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
-							                                                        <option value="">선택없음</option>
-							                                                        <option value="date">날짜</option>
-							                                                        <option value="datetime">일시</option>
-							                                                        <option value="boolean">여부(Y/N)</option>
-							                                                        <option value="text">문자</option>
-							                                                        <option value="int">숫자</option>
-							                                                        <option value="per">비율</option>
-							                                                    </select>
-						                                                    </td>
-						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
-						                                                </tr>
-						                                                <tr onclick="selectRow1(this)">
-						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="패키지양산">
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
@@ -660,9 +645,14 @@
 						                                                
 						                                            </tbody>
 						                                        </table>
-						                    					<div style="margin-top: 2px;text-align: right;">
-																	<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow(1)" ><span class="glyphicon glyphicon-minus">-</span></button>
-															       	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow(1)" ><span class="glyphicon glyphicon-plus">+</span></button>
+						                    					<div style="margin-top: 5px;text-align: left;width: 50%;float: left;">
+																
+																	<button type="button" id="upBtn1" class="btn btn-dark btn-sm" onclick="moveUp(1)" disabled="disabled"><i class="fa fa-arrow-up"></i></button>
+															       	<button type="button" id="downBtn1" class="btn btn-dark btn-sm" onclick="moveDown(1)" disabled="disabled"><i class="fa fa-arrow-down"></i></button>
+													        	</div>
+						                    					<div style="margin-top: 5px;text-align: right;width: 50%;float: right;">
+																	<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow(1)" ><i class="fa fa-minus"></i></button>
+															       	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow(1)" ><i class="fa fa-plus"></i></button>
 													        	</div>
 						                                    </div>
 						                                </div>
@@ -694,7 +684,7 @@
 						                                                </tr>
 						                                            </thead>
 						                                            <tbody>
-						                                                <tr>
+						                                                <tr onclick="selectRow2(this)">
 						                                                    <td class="text-bold-500">
 						                                                        <input type="text" class="form-control" name="chk2"  id="basicInput" value="" disabled="disabled">
 						                                                    </td>
@@ -714,8 +704,8 @@
 						                                            </tbody>
 						                                        </table>
 						                    					<div style="margin-top: 2px;text-align: right;">
-																	<button type="button" id="minusBtn2" class="btn btn-dark btn-sm" onclick="deleteRow(2)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
-															       	<button type="button" id="plusBtn2" class="btn btn-dark btn-sm" onclick="addRow(2)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+																	<button type="button" id="minusBtn2" class="btn btn-dark btn-sm" onclick="deleteRow(2)" disabled="disabled"><i class="fa fa-minus"></i></button>
+															       	<button type="button" id="plusBtn2" class="btn btn-dark btn-sm" onclick="addRow(2)" disabled="disabled"><i class="fa fa-plus"></i></button>
 													        	</div>
 						                                    </div>
 						                                </div>
@@ -747,7 +737,7 @@
 						                                                </tr>
 						                                            </thead>
 						                                            <tbody>
-						                                                <tr>
+						                                                <tr onclick="selectRow3(this)">
 						                                                    <td class="text-bold-500">
 						                                                        <input type="text" class="form-control" id="basicInput" value="" disabled="disabled">
 						                                                    </td>
@@ -767,8 +757,8 @@
 						                                            </tbody>
 						                                        </table>
 						                    					<div style="margin-top: 2px;text-align: right;">
-																	<button type="button" id="minusBtn3" class="btn btn-dark btn-sm" onclick="deleteRow(3)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
-															       	<button type="button" id="plusBtn3" class="btn btn-dark btn-sm" onclick="addRow(3)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+																	<button type="button" id="minusBtn3" class="btn btn-dark btn-sm" onclick="deleteRow(3)" disabled="disabled"><i class="fa fa-minus"></i></button>
+															       	<button type="button" id="plusBtn3" class="btn btn-dark btn-sm" onclick="addRow(3)" disabled="disabled"><i class="fa fa-plus"></i></button>
 													        	</div>
 						                                    </div>
 						                                </div>
@@ -777,10 +767,15 @@
 						                    </div>                                       
                                         </div>
                                     </div>
+                                    <div class="rignt">
+	                					<button type='button' class='btn btn-danger btn-sm' onclick="cancel()">취소</button>
+	                					<button type='button' class='btn btn-success btn-sm' onclick="save()">저장</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                        </div>
+                    </div>
                     </div>
                 </section>               
                 <!-- List group navigation ends -->
@@ -888,6 +883,9 @@ function deleteRow(flag){
 
 var currentSelector = null;
 function selectRow1(obj){
+	
+	$('#upBtn1').prop("disabled",false);
+	$('#downBtn1').prop("disabled",false);
 
 	$(obj).css('background-color', '#ffffd9');
 	
@@ -1000,6 +998,39 @@ function checkSubStep(obj, flag){
 		}
 	}
 }
+function save(){
+	if(confirm("이대로 일정 유형을 저장하시겠습니까?")){
+		alert("저장에 성공하였습니다.");
+	}
+}
+
+function moveUp(flag){
+	var $tr;
+	if(flag=="1"){
+		$tr = $(currentSelector);
+	}else if(flag=="2"){
+		$tr = $(currentSelector2);
+	}else{
+		$tr = $(currentSelector3);
+	}
+	
+	$tr.prev().before($tr); // 현재 tr 의 이전 tr 앞에 선택한 tr 넣기
+	
+}
+
+function moveDown(flag){
+	var $tr;
+	if(flag=="1"){
+		$tr = $(currentSelector);
+	}else if(flag=="2"){
+		$tr = $(currentSelector2);
+	}else{
+		$tr = $(currentSelector3);
+	}
+	
+	$tr.next().after($tr); // 현재 tr 의 다음 tr 뒤에 선택한 tr 넣기
+}
+
 
 </script>
 </body>
