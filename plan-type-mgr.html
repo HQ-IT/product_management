@@ -22,30 +22,53 @@
 window.onload = function () {
     feather.replace();
 }
-function addRow(){
+function addRow(flag){
 	
 	var htmlText = '';
-	htmlText +='<a class="list-group-item list-group-item-action table1"';
-	htmlText +='id="list-profile-list" data-bs-toggle="list"';
-	htmlText +='href="#list-profile" role="tab">';
-	htmlText +='<input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="">';
-	htmlText +='<select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,1)">';
-	htmlText +='<option value="">선택없음</option>';
-	htmlText +='<option value="date">날짜</option>';
-	htmlText +='<option value="datetime">일시</option>';
-	htmlText +='<option value="boolean">여부(Y/N)</option>';
-	htmlText +='<option value="text">문자</option>';
-	htmlText +='<option value="int">숫자</option>';
-	htmlText +='<option value="per">비율</option>';
-	htmlText +='<option value="step">단계</option>';
-	htmlText +='</select>';
-	htmlText +='</a>';
-	
-	$("#list-home-list").parent().after(htmlText);
+
+	if(flag=="1"){
+		htmlText +='<a class="list-group-item list-group-item-action table1"';
+		htmlText +='id="list-profile-list" data-bs-toggle="list"';
+		htmlText +='href="#list-profile" role="tab">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="">';
+		htmlText +='<select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,1)">';
+		htmlText +='<option value="">선택없음</option>';
+		htmlText +='<option value="date">날짜</option>';
+		htmlText +='<option value="datetime">일시</option>';
+		htmlText +='<option value="boolean">여부(Y/N)</option>';
+		htmlText +='<option value="text">문자</option>';
+		htmlText +='<option value="int">숫자</option>';
+		htmlText +='<option value="per">비율</option>';
+		htmlText +='<option value="step">단계</option>';
+		htmlText +='</select>';
+		htmlText +='</a>';
+		$("#list-home-list").parent().after(htmlText);
+	}else if(flag=="2"){
+		htmlText +='<a class="list-group-item list-group-item-action table2"';
+		htmlText +='id="list-profile-list" data-bs-toggle="list"';
+		htmlText +='href="#list-profile" role="tab">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="">';
+		htmlText +='<select class="form-select" id="basicSelect" style="width: 39%;display: inline;" onchange="pickSubStep(this,2)">';
+		htmlText +='<option value="">선택없음</option>';
+		htmlText +='<option value="date">날짜</option>';
+		htmlText +='<option value="datetime">일시</option>';
+		htmlText +='<option value="boolean">여부(Y/N)</option>';
+		htmlText +='<option value="text">문자</option>';
+		htmlText +='<option value="int">숫자</option>';
+		htmlText +='<option value="per">비율</option>';
+		htmlText +='<option value="step">단계</option>';
+		htmlText +='</select>';
+		htmlText +='</a>';
+		$("#list-home-list2").parent().after(htmlText);
+	}else if(flag=="3"){
+		
+	}else if(flag=="4"){
+		
+	}
 }
 
-function deleteRow(){
-	var table = $('.table1');
+function deleteRow(flag){
+	var table = $('.table' + flag);
 	
 	if(table.length==0){
 		alert("삭제할 행이 없습니다");
@@ -60,9 +83,13 @@ function pickSubStep(obj, flag){
 		if(flag=="1"){
 			$('#list-home-list2').children().eq(0).prop("disabled",false);
 			$('#list-home-list2').children().eq(1).prop("disabled",false);
+			$('#minusBtn2').prop("disabled",false);
+			$('#plusBtn2').prop("disabled",false);
 		}else if(flag=="2"){
 			$('#list-home-list3').children().eq(0).prop("disabled",false);
-			$('#list-home-list3').children().eq(1).prop("disabled",false);	
+			$('#list-home-list3').children().eq(1).prop("disabled",false);
+			$('#minusBtn3').prop("disabled",false);
+			$('#plusBtn3').prop("disabled",false);
 		}else if(flag=="3"){
 			
 		}else if(flag=="4"){
@@ -677,8 +704,8 @@ function pickSubStep(obj, flag){
                                                     </a>
                                             </div>
 						          	        <div style="margin-top: 2px;text-align: right;">
-												<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow()" ><span class="glyphicon glyphicon-minus">-</span></button>
-									        	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow()" ><span class="glyphicon glyphicon-plus">+</span></button>
+												<button type="button" id="minusBtn" class="btn btn-dark btn-sm" onclick="deleteRow(1)" ><span class="glyphicon glyphicon-minus">-</span></button>
+									        	<button type="button" id="plusBtn" class="btn btn-dark btn-sm" onclick="addRow(1)" ><span class="glyphicon glyphicon-plus">+</span></button>
 							        		</div>
                                         </div>
                                         
@@ -686,7 +713,7 @@ function pickSubStep(obj, flag){
                                         <div class="col-12 col-sm-12 col-md-4">
                                             	<h5>2단계</h5>
                                                 <div class="list-group" role="tablist">
-                                                    <a class="list-group-item list-group-item-action" id="list-home-list2" data-bs-toggle="list" href="#list-home" role="tab">
+                                                    <a class="list-group-item list-group-item-action table2" id="list-home-list2" data-bs-toggle="list" href="#list-home" role="tab">
                                                         <input type="text" class="form-control" id="basicInput2" style="width: 59%; display: inline;" value="" disabled="disabled">
 	                                                    <select class="form-select" name="basicSelect2" style="width: 39%;display: inline;" disabled="disabled"  onchange="pickSubStep(this,'2')">
 	                                                        <option value="">선택없음</option>
@@ -700,13 +727,17 @@ function pickSubStep(obj, flag){
 	                                                    </select>
                                                       </a>
                                             </div>
+  						          	        <div style="margin-top: 2px;text-align: right;">
+												<button type="button" id="minusBtn2" class="btn btn-dark btn-sm" onclick="deleteRow(2)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
+									        	<button type="button" id="plusBtn2" class="btn btn-dark btn-sm" onclick="addRow(2)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+							        		</div>                                          
                                         </div>
                                         
                                         <!-- 3단게 -->
                                         <div class="col-12 col-sm-12 col-md-4">
                                             	<h5>3단계</h5>
                                                 <div class="list-group" role="tablist">
-                                                    <a class="list-group-item list-group-item-action" id="list-home-list3"  data-bs-toggle="list" href="#list-home" role="tab" st>
+                                                    <a class="list-group-item list-group-item-action table3" id="list-home-list3"  data-bs-toggle="list" href="#list-home" role="tab" st>
                                                         <input type="text" class="form-control" id="basicInput" style="width: 59%; display: inline;" value="" disabled="disabled">
 	                                                    <select class="form-select" name="basicSelect" style="width: 39%;display: inline;" disabled="disabled"  onchange="pickSubStep(this,'3')">
 		                                                        <option value="">선택없음</option>
@@ -720,6 +751,10 @@ function pickSubStep(obj, flag){
 	                                                    </select>
                                                       </a>
                                             </div>
+   						          	        <div style="margin-top: 2px;text-align: right;">
+												<button type="button" id="minusBtn3" class="btn btn-dark btn-sm" onclick="deleteRow(3)" disabled="disabled"><span class="glyphicon glyphicon-minus">-</span></button>
+									        	<button type="button" id="plusBtn3" class="btn btn-dark btn-sm" onclick="addRow(3)" disabled="disabled"><span class="glyphicon glyphicon-plus">+</span></button>
+							        		</div>                                         
                                         </div>
                                     </div>
                                 </div>
