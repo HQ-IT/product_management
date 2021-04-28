@@ -21,7 +21,7 @@
  	<style>
 	#main{
 	    margin-left: 0px;
-	    margin-top: 0px;
+	    margin-top: -10px;
 	}
 	#header{
 	    width: 100%;
@@ -37,6 +37,7 @@
 	.sidebar-item{
 	    height: auto;
 	    padding: 16px 20px;
+	    position: relative;
 	}
 	ul{
 	    display: table;
@@ -104,6 +105,9 @@
                             <a href="plan-type-list.html">제품 일정 유형 관리</a>
                         </li>
                         <li class="submenu-item ">
+                            <a href="plan-by-brand.html">개발 일정 관리</a>
+                        </li>
+                        <li class="submenu-item ">
                             <a href="act-type-mgr.html">항목별 타입 관리</a>
                         </li>
                     </ul>
@@ -162,7 +166,7 @@
                                         <td>슈피겐케이스</td>
                                         <td>v1</td>
                                         <td>베이직</td>
-                                        <td><span class="badge bg-danger">Inactive</span></td>
+                                        <td><span class="badge bg-success">Active</span></td>
                                         <td>홍길동</td>
                                         <td>2021-02-01</td>
                                     </tr>
@@ -367,7 +371,7 @@
     	function openDetails(obj){
     		
     		var width = 850;
-    		var height = 530;
+    		var height = 500;
     	    var left = Math.ceil(( window.screen.width - width )/2);
     	    var top = Math.ceil(( window.screen.height - height )/2);
     	    

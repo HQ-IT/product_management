@@ -37,6 +37,7 @@
 .sidebar-item{
     height: auto;
     padding: 16px 20px;
+    position: relative;
 }
 ul{
     display: table;
@@ -73,9 +74,8 @@ ul li{
     content: '\25BD';
     color: #ccc;
 }
-table{
-    overflow:auto;
-}
+
+
 </style>
 
 <body>
@@ -104,6 +104,9 @@ table{
                             <a href="plan-type-list.html">제품 일정 유형 관리</a>
                         </li>
                         <li class="submenu-item ">
+                            <a href="plan-by-brand.html">개발 일정 관리</a>
+                        </li>
+                        <li class="submenu-item ">
                             <a href="act-type-mgr.html">항목별 타입 관리</a>
                         </li>
                     </ul>
@@ -130,7 +133,6 @@ table{
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-9">
-                        <!-- <h5>나의 프로젝트 현황</h5> -->
                         <div class="row">
                             <div class="col-6 col-lg-3 col-md-6">
                                 <div class="card">
@@ -142,8 +144,8 @@ table{
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">미결</h6>
-                                                <h6 class="font-extrabold mb-0">5</h6>
+                                                <h6 class="text-muted font-semibold">진행중 프로젝트</h6>
+                                                <h6 class="font-extrabold mb-0">30</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -159,7 +161,7 @@ table{
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">예결</h6>
+                                                <h6 class="text-muted font-semibold">나의 프로젝트</h6>
                                                 <h6 class="font-extrabold mb-0">12</h6>
                                             </div>
                                         </div>
@@ -176,8 +178,8 @@ table{
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">진행중</h6>
-                                                <h6 class="font-extrabold mb-0">30</h6>
+                                                <h6 class="text-muted font-semibold">완료 프로젝트</h6>
+                                                <h6 class="font-extrabold mb-0">120</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -193,8 +195,8 @@ table{
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">완료</h6>
-                                                <h6 class="font-extrabold mb-0">120</h6>
+                                                <h6 class="text-muted font-semibold">Saved Post</h6>
+                                                <h6 class="font-extrabold mb-0">112</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -205,220 +207,82 @@ table{
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 style="display: inline-block;">프로젝트 진행 현황</h4>
-                                        <a style="position:absolute; right: 30px;"><span style="font-size: 18px;">+ more</span></a>
+                                        <h4>Profile Visit</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chart-profile-visit"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-xl-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Profile Visit</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-left: 20px; margin-bottom: 10px;">
-                                                <li class="nav-item" role="presentation">
-                                                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#spigen" role="tab" aria-controls="home" aria-selected="true">Spigen</a>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#steinheil" role="tab" aria-controls="profile" aria-selected="false">Steinheil</a>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#cyrill" role="tab" aria-controls="profile" aria-selected="false">Cyrill</a>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#powerarc" role="tab" aria-controls="profile" aria-selected="false">PowerArc</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content" id="myTabContent">
-                                                <div class="tab-pane fade show active" id="spigen" role="tabpanel" aria-labelledby="home-tab">
-                                                    <table class="table table-hover mb-0" >
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width: 15%;">기종</th>
-                                                                <th style="width: 15%;">모델</th>
-                                                                <th style="width: 60%;">STATUS</th>
-                                                                <th style="width: 10%;"></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">Apple iPhone 11</td>
-                                                                <td>슬림아머</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-success btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"></span></button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                    </div>
-                                                                </td>
-                                                                <td>~ 2021-04-30</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Apple iPhone X</td>
-                                                                <td>크리스탈 슬롯</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-warning btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">초도품</button>
-                                                                    </div>
-                                                                </td>
-                                                                <td>~ 2021-05-10</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Samsung Galaxy Note</td>
-                                                                <td>울트라 하이브리드</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-danger btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                    </div>
-                                                                </td>
-                                                                <td>~ 2021-05-20</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-primary" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">Europe</h5>
                                                 </div>
-                                                <div class="tab-pane fade" id="steinheil" role="tabpanel" aria-labelledby="profile-tab">
-                                                    <table class="table table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width: 15%;">기종</th>
-                                                                <th style="width: 15%;">모델</th>
-                                                                <th style="width: 70%;">STATUS</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">Apple iPhone 11</td>
-                                                                <td>슬림아머</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"></span></button>
-                                                                        <button type="button" class="btn btn-success btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Apple iPhone X</td>
-                                                                <td>크리스탈 슬롯</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-warning btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">초도품</button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Samsung Galaxy Note</td>
-                                                                <td>울트라 하이브리드</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-success btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">862</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-europe"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-success" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">America</h5>
                                                 </div>
-                                                <div class="tab-pane fade" id="cyrill" role="tabpanel" aria-labelledby="profile-tab">
-                                                    <table class="table table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width: 15%;">기종</th>
-                                                                <th style="width: 15%;">모델</th>
-                                                                <th style="width: 70%;">STATUS</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">Samsung Galaxy Note</td>
-                                                                <td>울트라 하이브리드</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-success btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">375</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-america"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-danger" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">Indonesia</h5>
                                                 </div>
-                                                <div class="tab-pane fade" id="powerarc" role="tabpanel" aria-labelledby="profile-tab">
-                                                    <table class="table table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width: 15%;">기종</th>
-                                                                <th style="width: 15%;">모델</th>
-                                                                <th style="width: 70%;">STATUS</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">Apple iPhone X</td>
-                                                                <td>크리스탈 슬롯</td>
-                                                                <td>
-                                                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">설계</button>
-                                                                        <button type="button" class="btn btn-outline-secondary btn-status">BOM</button>
-                                                                        <button type="button" class="btn btn-warning btn-status">패키지</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">금형</button>
-                                                                        <button type="button" class="btn btn-outline-dark btn-status">초도품</button>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">1025</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-indonesia"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
+                            <div class="col-12 col-xl-8">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Latest Update</h4>
+                                        <h4>Latest Comments</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -426,8 +290,7 @@ table{
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>
-                                                        <th>Action</th>
-                                                        <th>Date</th>
+                                                        <th>Comment</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -437,14 +300,11 @@ table{
                                                                 <div class="avatar avatar-md">
                                                                     <img src="assets/images/faces/5.jpg">
                                                                 </div>
-                                                                <p class="font-bold ms-3 mb-0">IT개발팀 홍길동</p>
+                                                                <p class="font-bold ms-3 mb-0">Si Cantik</p>
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                            <p class=" mb-0">SKU 등록 단계 입력 완료</p>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">2021-04-28 13:58:23</p>
+                                                            <p class=" mb-0">Congratulations on your graduation!</p>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -453,14 +313,13 @@ table{
                                                                 <div class="avatar avatar-md">
                                                                     <img src="assets/images/faces/2.jpg">
                                                                 </div>
-                                                                <p class="font-bold ms-3 mb-0">IT개발팀 박길동</p>
+                                                                <p class="font-bold ms-3 mb-0">Si Ganteng</p>
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                            <p class=" mb-0">신규 프로젝트 생성 (슈피겐 iPhone 11 울트라 하이브리드)</p>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">2021-04-27 17:23:12</p>
+                                                            <p class=" mb-0">Wow amazing design! Can you make another
+                                                                tutorial for
+                                                                this design?</p>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -479,23 +338,53 @@ table{
                                         <img src="assets/images/faces/1.jpg" alt="Face 1">
                                     </div>
                                     <div class="ms-3 name">
-                                        <h5 class="font-bold">IT개발팀 홍길동</h5>
-                                        <h6 class="text-muted mb-0">@spigen</h6>
+                                        <h5 class="font-bold">John Duck</h5>
+                                        <h6 class="text-muted mb-0">@johnducky</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header">
-                                <h4>Calendar</h4>
+                                <h4>Recent Messages</h4>
                             </div>
                             <div class="card-content pb-4">
-                                <img src="assets/images/sample.png" style="width: 100%;">
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="assets/images/faces/4.jpg">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">Hank Schrader</h5>
+                                        <h6 class="text-muted mb-0">@johnducky</h6>
+                                    </div>
+                                </div>
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="assets/images/faces/5.jpg">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">Dean Winchester</h5>
+                                        <h6 class="text-muted mb-0">@imdean</h6>
+                                    </div>
+                                </div>
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="assets/images/faces/1.jpg">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">John Dodol</h5>
+                                        <h6 class="text-muted mb-0">@dodoljohn</h6>
+                                    </div>
+                                </div>
+                                <div class="px-4">
+                                    <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
+                                        Conversation</button>
+                                </div>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header">
-                                <h4>프로젝트 일정 현황</h4>
+                                <h4>Visitors Profile</h4>
                             </div>
                             <div class="card-body">
                                 <div id="chart-visitors-profile"></div>
