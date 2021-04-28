@@ -106,12 +106,19 @@ td{
     width: 100%;
     display: inline-block;
 }
+.modal_date{
+    width: 100px;
+    display: inline-block;
+}
 .form-check{
     display: inline-block;
     margin-right: 15px;
 }
 .btn-outline-secondary{
     opacity: 0.7;
+}
+table{
+    overflow:auto;
 }
 </style>
 
@@ -166,7 +173,7 @@ td{
             <div class="page-content">
                 <section class="row">
                     <div class="col-12" style="text-align:right">
-                        <button class="btn btn-primary" style="margin: 0 20px;">신규 등록</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#full-scrn" style="margin: 0 20px;">신규 등록</button>
                     </div>
                     <!-- <div class="col-12">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -286,20 +293,22 @@ td{
                                     <div class="card-content">
                                         <div class="card-body">
                                             <div class="table-responsive">
-                                                <table class="table table-hover mb-0">
+                                                <table class="table table-hover mb-0" style="min-width: 1450px;">
                                                     <thead>
                                                         <tr>
-                                                            <th style="width: 10%;">기종</th>
-                                                            <th style="width: 10%;">모델</th>
-                                                            <th style="width: 10%;">SKU</th>
-                                                            <th style="width: 70%;">STATUS</th>
+                                                            <th style="width: 8%;">브랜드</th>
+                                                            <th style="width: 9%;">기종</th>
+                                                            <th style="width: 9%;">모델</th>
+                                                            <th style="width: 9%;">SKU</th>
+                                                            <th style="width: 65%;">STATUS</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td class="text-bold-500">슈피겐</td>
                                                             <td class="text-bold-500">Apple iPhone 11</td>
                                                             <td>슬림아머</td>
-                                                            <td>ACS1234567</td>
+                                                            <td></td>
                                                             <td>
                                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인<span class="info"><br>(2021-04-27)</span></button>
@@ -314,6 +323,7 @@ td{
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td class="text-bold-500">슈피겐</td>
                                                             <td class="text-bold-500">Samsung Galaxy 21</td>
                                                             <td>울트라 하이브리드</td>
                                                             <td>AEG2123378</td>
@@ -331,6 +341,7 @@ td{
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td class="text-bold-500">씨릴</td>
                                                             <td class="text-bold-500">Apple iPhone X</td>
                                                             <td>크리스탈 슬롯</td>
                                                             <td>DFE4569378</td>
@@ -349,6 +360,7 @@ td{
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td class="text-bold-500">씨릴</td>
                                                             <td class="text-bold-500">Samsung Galaxy Note</td>
                                                             <td>울트라 하이브리드</td>
                                                             <td>AEG2123378</td>
@@ -366,6 +378,7 @@ td{
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td class="text-bold-500">파워아크</td>
                                                             <td class="text-bold-500">파워 차져</td>
                                                             <td>파워 차져</td>
                                                             <td>PAB2123378</td>
@@ -393,17 +406,19 @@ td{
                                             <table class="table table-hover mb-0">
                                                 <thead>
                                                     <tr>
-                                                        <th style="width: 10%;">기종</th>
-                                                        <th style="width: 10%;">모델</th>
-                                                        <th style="width: 10%;">SKU</th>
-                                                        <th style="width: 70%;">STATUS</th>
+                                                        <th style="width: 8%;">브랜드</th>
+                                                        <th style="width: 9%;">기종</th>
+                                                        <th style="width: 9%;">모델</th>
+                                                        <th style="width: 9%;">SKU</th>
+                                                        <th style="width: 65%;">STATUS</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <td class="text-bold-500">슈피겐</td>
                                                         <td class="text-bold-500">Apple iPhone 11</td>
                                                         <td>슬림아머</td>
-                                                        <td>ACS1234567</td>
+                                                        <td></td>
                                                         <td>
                                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                                 <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인<span class="info"><br>(2021-04-27)</span></button>
@@ -418,6 +433,7 @@ td{
                                                         </td>
                                                     </tr>
                                                     <tr>
+                                                        <td class="text-bold-500">슈피겐</td>
                                                         <td class="text-bold-500">Apple iPhone X</td>
                                                         <td>크리스탈 슬롯</td>
                                                         <td>DFE4569378</td>
@@ -436,6 +452,7 @@ td{
                                                         </td>
                                                     </tr>
                                                     <tr>
+                                                        <td class="text-bold-500">씨릴</td>
                                                         <td class="text-bold-500">Samsung Galaxy Note</td>
                                                         <td>울트라 하이브리드</td>
                                                         <td>AEG2123378</td>
@@ -587,13 +604,11 @@ td{
 
     <!--large size Modal -->
     <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-            role="document">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel17">SKU 등록 단계 <span id="modal_title" style="display: none; font-size: 15px;"> -> SKU 등록 일정</span></h4>
-                    <button type="button" class="close" data-bs-dismiss="modal"
-                        aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <i data-feather="x"></i>
                     </button>
                 </div>
@@ -609,28 +624,21 @@ td{
                                             <th style="width: 20%;">유형</th>
                                             <th style="width: 20%;">타입</th>
                                             <th style="width: 40%;">입력</th>
+                                            <th style="width: 20%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-bold-500">시작일(Plan)</td>
+                                            <td class="text-bold-500">시작/종료 (Plan)</td>
                                             <td>날짜</td>
-                                            <td class="text-bold-500">2021-04-19</td>
+                                            <td class="text-bold-500">2021-04-23 ~ 2021-04-27</td>
+                                            <td><span style="font-size: 15px;">(4 Days)</span></td>
                                         </tr>
                                         <tr>
-                                            <td class="text-bold-500">종료일(Plan)</td>
+                                            <td class="text-bold-500">시작/종료</td>
                                             <td>날짜</td>
-                                            <td class="text-bold-500">2021-04-23</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-bold-500">시작일</td>
-                                            <td>날짜</td>
-                                            <td class="text-bold-500"><input class="modal_input"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-bold-500">종료일</td>
-                                            <td>날짜</td>
-                                            <td class="text-bold-500"><input class="modal_input"></td>
+                                            <td class="text-bold-500"><input class="modal_date"> ~ <input class="modal_date" ></td>
+                                            <td><span style="font-size: 15px;">(0 Days)</span></td>
                                         </tr>
                                         <tr>
                                             <td class="text-bold-500">SKU</td>
@@ -638,7 +646,7 @@ td{
                                             <td class="text-bold-500"><input class="modal_input"></td>
                                         </tr>
                                         <tr>
-                                            <td class="text-bold-500">SIS 등록</td>
+                                            <td class="text-bold-500">샘플 항목1</td>
                                             <td>Y/N</td>
                                             <td class="text-bold-500">
                                                 <div class="form-check">
@@ -664,28 +672,30 @@ td{
                         </div>
                         <div class="carousel-item">
                             <div class="modal-body">
-                                <button class="btn btn-primary" id="modal_submenu" href="#carouselExampleControls" role="button" data-bs-slide="next" onclick="modal_prev()" style="font-size: 22px; line-height: 0.9;"><</button>
+                                <button class="btn btn-primary" id="modal_submenu" href="#carouselExampleControls" role="button" data-bs-slide="prev" onclick="modal_prev()" style="font-size: 22px; line-height: 0.9;"><</button>
                                 <table class="table table-light mb-0">
                                     <thead>
                                         <tr>
                                             <th style="width: 20%;">유형</th>
                                             <th style="width: 20%;">타입</th>
                                             <th style="width: 40%;">입력</th>
+                                            <th style="width: 20%;"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-bold-500">SIS 등록 시작일</td>
+                                            <td class="text-bold-500">SIS 등록</td>
                                             <td>날짜</td>
-                                            <td class="text-bold-500"><input class="modal_input"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-bold-500">SIS 등록 종료일</td>
-                                            <td>날짜</td>
-                                            <td class="text-bold-500"><input class="modal_input"></td>
+                                            <td class="text-bold-500"><input class="modal_date"> ~ <input class="modal_date" ></td>
+                                            <td><span style="font-size: 15px;">(0 Days)</span></td>
                                         </tr>
                                         <tr>
                                             <td class="text-bold-500">SIS 등록 SKU</td>
+                                            <td>텍스트</td>
+                                            <td class="text-bold-500"><input class="modal_input"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-bold-500">SIS 등록 버전</td>
                                             <td>텍스트</td>
                                             <td class="text-bold-500"><input class="modal_input"></td>
                                         </tr>
@@ -811,19 +821,22 @@ td{
                             <tr>
                                 <th style="width: 20%;">유형</th>
                                 <th style="width: 20%;">타입</th>
-                                <th style="width: 60%;">입력</th>
+                                <th style="width: 40%;">입력</th>
+                                <th style="width: 20%;"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-bold-500">시작일</td>
+                                <td class="text-bold-500">시작/종료(Plan)</td>
                                 <td>날짜</td>
-                                <td class="text-bold-500"><input disabled value="2021-04-23"></td>
+                                <td class="text-bold-500">2021-04-23 ~ 2021-04-27</td>
+                                <td><span style="font-size: 15px;">(4 Days)</span></td>
                             </tr>
                             <tr>
-                                <td class="text-bold-500">종료일</td>
+                                <td class="text-bold-500">시작/종료</td>
                                 <td>날짜</td>
-                                <td class="text-bold-500"><input disabled value="2021-04-27"></td>
+                                <td class="text-bold-500"><input class="modal_date" disabled value="2021-04-23"> ~ <input class="modal_date" disabled value="2021-04-27"></td>
+                                <td><span style="font-size: 15px;">(4 Days)</span></td>
                             </tr>
                             <tr>
                                 <td class="text-bold-500">CEO 승인여부</td>
@@ -857,7 +870,7 @@ td{
     </div>
 
     <!-- full size modal-->
-    <!-- <div class="modal fade text-left " id="full-scrn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel20" aria-hidden="true">
+    <div class="modal fade text-left " id="full-scrn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel20" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-full" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -881,7 +894,7 @@ td{
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
