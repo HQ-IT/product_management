@@ -24,9 +24,9 @@ var optionsProfileVisit = {
 	},
 }
 let optionsVisitorsProfile  = {
-	series: [70, 30],
-	labels: ['Male', 'Female'],
-	colors: ['#435ebe','#55c6e8'],
+	series: [50, 30, 20],
+	labels: ['D-7', 'D-3', 'D-1'],
+	colors: ['#198754','#ffc107', '#dc3545'],
 	chart: {
 		type: 'donut',
 		width: '100%',
