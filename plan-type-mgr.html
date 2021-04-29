@@ -189,14 +189,16 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list1">
 						                                        	<colgroup>
-																		<col width="55%">
-																		<col width="40%">
-																		<col width="15%">
+																		<col width="43%">
+																		<col width="31%">
+																		<col width="17%">
+																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
+						                                                    <th class="center">담당자</th>
 						                                                    <th class="center">sub</th>
 						                                                </tr>
 						                                            </thead>
@@ -216,21 +218,14 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
-						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
-						                                                </tr>
-						                                                <tr onclick="selectRow1(this)">
-						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="">
-						                                                    </td>
 						                                                    <td>
-						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
-							                                                        <option value="">선택없음</option>
-							                                                        <option value="date">날짜</option>
-							                                                        <option value="datetime">일시</option>
-							                                                        <option value="boolean">여부(Y/N)</option>
-							                                                        <option value="text">문자</option>
-							                                                        <option value="int">숫자</option>
-							                                                        <option value="per">비율</option>
+						                                                    	<select class="form-select" name="manager" >
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
 							                                                    </select>
 						                                                    </td>
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
@@ -250,6 +245,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" >
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
@@ -267,6 +272,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" >
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
@@ -284,6 +299,43 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" >
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
+						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
+						                                                </tr>
+						                                                <tr onclick="selectRow1(this)">
+						                                                    <td class="text-bold-500">
+						                                                        <input type="text" class="form-control" id="basicInput" value="">
+						                                                    </td>
+						                                                    <td>
+						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
+							                                                        <option value="">선택없음</option>
+							                                                        <option value="date">날짜</option>
+							                                                        <option value="datetime">일시</option>
+							                                                        <option value="boolean">여부(Y/N)</option>
+							                                                        <option value="text">문자</option>
+							                                                        <option value="int">숫자</option>
+							                                                        <option value="per">비율</option>
+							                                                    </select>
+						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" >
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                            </tbody>
@@ -466,6 +518,16 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +=' <option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+    	htmlText +='<option value="boolean">박혜림</option>';
+    	htmlText +='<option value="text">김근원</option>';
+    	htmlText +='<option value="int">정하영</option>';
+    	htmlText +='</select>';
+		htmlText +=' </td>';
 		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>';
 		htmlText +='</tr>';		
 
@@ -689,9 +751,9 @@ function selectBrand(obj){
 	if($(obj).val()=="1"){
 		$('#rev').val("v3");
 	}else if($(obj).val()=="2"){
-		$('#rev').val("v2");
-	}else if($(obj).val()=="3"){
 		$('#rev').val("v6");
+	}else if($(obj).val()=="3"){
+		$('#rev').val("v2");
 	}else{
 		$('#rev').val("v3");
 	}
