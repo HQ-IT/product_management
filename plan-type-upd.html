@@ -676,42 +676,6 @@ function selectRow1(obj){
 		
 		htmlText +='<tr onclick="selectRow2(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="시작일">';
-		htmlText +='</td>';
-		htmlText +='<td>';
-		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,2)">';
-		htmlText +='<option value="">선택없음</option>';
-		htmlText +='<option value="date" selected="selected">날짜</option>';
-		htmlText +='<option value="datetime">일시</option>';
-		htmlText +='<option value="boolean">여부(Y/N)</option>';
-		htmlText +='<option value="text">문자</option>';
-		htmlText +='<option value="int">숫자</option>';
-		htmlText +='<option value="per">비율</option>';
-		htmlText +='</select>';
-		htmlText +='</td>';
-		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
-		htmlText +='</tr>';		
-		
-		htmlText +='<tr onclick="selectRow2(this)">';
-		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="종료일">';
-		htmlText +='</td>';
-		htmlText +='<td>';
-		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,2)">';
-		htmlText +='<option value="">선택없음</option>';
-		htmlText +='<option value="date" selected="selected">날짜</option>';
-		htmlText +='<option value="datetime">일시</option>';
-		htmlText +='<option value="boolean">여부(Y/N)</option>';
-		htmlText +='<option value="text">문자</option>';
-		htmlText +='<option value="int">숫자</option>';
-		htmlText +='<option value="per">비율</option>';
-		htmlText +='</select>';
-		htmlText +='</td>';
-		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
-		htmlText +='</tr>';
-		
-		htmlText +='<tr onclick="selectRow2(this)">';
-		htmlText +='<td class="text-bold-500">';
 		htmlText +='<input type="text" class="form-control" id="basicInput" value="CEO 승인여부">';
 		htmlText +='</td>';
 		htmlText +='<td>';
@@ -832,9 +796,9 @@ function selectRow1(obj){
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';		
 		
-		htmlText +='<tr onclick="selectRow2(this)">';
+		htmlText +='<tr onclick="selectRow2(this)" style="background-color:#ffffd9">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="SIS 등록 일정">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="Sub 메뉴">';
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,2)">';
@@ -857,7 +821,7 @@ function selectRow1(obj){
 
 		htmlText +='<tr onclick="selectRow3(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="SIS등록일자">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="항목1">';
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,3)">';
@@ -875,7 +839,7 @@ function selectRow1(obj){
 		
 		htmlText +='<tr onclick="selectRow3(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="SIS등록SKU">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="항목2">';
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,3)">';
@@ -893,7 +857,7 @@ function selectRow1(obj){
 		
 		htmlText +='<tr onclick="selectRow3(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="SIS등록버전">';
+		htmlText +='<input type="text" class="form-control" id="basicInput" value="항목3">';
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,3)">';
