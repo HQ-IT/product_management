@@ -109,9 +109,9 @@
                         <li class="submenu-item ">
                             <a href="act-type-mgr.html">항목별 타입 관리</a>
                         </li>
-                         <li class="submenu-item ">
+                        <li class="submenu-item ">
                             <a href="manager-mgr.html">담당자 관리</a>
-                        </li>                       
+                        </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
@@ -134,14 +134,14 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>항목별 타입 관리</h3>
-                            <p class="text-subtitle text-muted">액티비티 항목별 데이터 타입을 등록 및 삭제합니다.</p>
+                            <h3>담당자 관리</h3>
+                            <p class="text-subtitle text-muted">브랜드별 담당자를 관리합니다.</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">마스터 데이터 관리</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">항목별 타입 관리</li>
+                                    <li class="breadcrumb-item active" aria-current="page">담당자 관리</li>
                                 </ol>
                             </nav>
                         </div>
@@ -153,205 +153,176 @@
                             <table class="table table-striped" id="table1">
                                 <thead>
                                     <tr>
-                                        <th>순번</th>
-                                        <th>입력 유형명</th>
-                                        <th>데이터 형식</th>
-                                        <th>상세 형식</th>
-                                        <th>활성화</th>
+                                        <th class="center">순번</th>
+                                        <th class="center">브랜드명</th>
+                                        <th class="center">팀명</th>
+                                        <th class="center">담당자명</th>
+                                        <th class="center">활성화</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td><input type="text" class="form-control" name="planName" value="목표일"></td>
+                                        <td class="center">1</td>
                                         <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d" selected="selected">Date</option>
-                                        		<option value="y">Y/N</option>
-                                        		<option value="f">File</option>
-                                        		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">슈피겐케이스</option>
+                                        		<option value="n">씨릴</option>
+                                        		<option value="d">슈타인하일</option>
+                                        		<option value="f">파워아크</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                        		<option value="">선택없음</option>
+                                        		<option value="t" selected="selected">기준정보관리</option>
+                                        		<option value="n">씨릴사업팀</option>
+                                        		<option value="d">슈타인하일개발</option>
+                                        		<option value="f">파워악세사리관리</option>
+                                        		<option value="f">모바일케이스개발</option>
                                         	</select>
                                         </td>
                                         <td>
                                         	<select name="dataTypeDtl" class="form-select">
-                                        		<option value="1">YYYY-MM-DD</option>
-                                        		<option value="2" >YYYYMMDD</option>
-                                        		<option value="3" selected="selected">YY-MM-DD</option>
-                                        		<option value="4" >YYMMDD</option>
-                                        		<option value="5">YYYY-MM-DD HH:MI:SS</option>
-                                        		<option value="6">YYYY-MM-DD ~ YYYY-MM-DD</option>
-                                        		<option value="7">Year</option>
-                                        		<option value="8">Month</option>
-                                        		<option value="9">day</option>
+                                        		<option value="1">전체</option>
+                                        		<option value="2" selected="selected">김주식</option>
+                                        		<option value="3" >박혜림</option>
+                                        		<option value="4" >김근원</option>
+                                        		<option value="5">정하영</option>
                                         	</select>
-                                        <td>
+                                        <td class="center">
                                             <span class="badge bg-success">Active</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td><input type="text" class="form-control" name="planName" value="완료일"></td>
+                                        <td class="center">2</td>
                                         <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d" selected="selected">Date</option>
-                                        		<option value="y">Y/N</option>
-                                        		<option value="f">File</option>
-                                          		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">슈피겐케이스</option>
+                                        		<option value="n">씨릴</option>
+                                        		<option value="d">슈타인하일</option>
+                                        		<option value="f">파워아크</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                        		<option value="">선택없음</option>
+                                        		<option value="t" selected="selected">기준정보관리</option>
+                                        		<option value="n">씨릴사업팀</option>
+                                        		<option value="d">슈타인하일개발</option>
+                                        		<option value="f">파워악세사리관리</option>
+                                        		<option value="f">모바일케이스개발</option>
                                         	</select>
                                         </td>
                                         <td>
                                         	<select name="dataTypeDtl" class="form-select">
-                                        		<option value="1">YYYY-MM-DD</option>
-                                        		<option value="2" >YYYYMMDD</option>
-                                        		<option value="3" selected="selected">YY-MM-DD</option>
-                                        		<option value="4" >YYMMDD</option>
-                                        		<option value="5">YYYY-MM-DD HH:MI:SS</option>
-                                        		<option value="6">YYYY-MM-DD ~ YYYY-MM-DD</option>
-                                        		<option value="7">Year</option>
-                                        		<option value="8">Month</option>
-                                        		<option value="9">day</option>
+                                        		<option value="1">전체</option>
+                                        		<option value="2">김주식</option>
+                                        		<option value="3" selected="selected">박혜림</option>
+                                        		<option value="4" >김근원</option>
+                                        		<option value="5">정하영</option>
                                         	</select>
-                                        <td>
-                                            <span class="badge bg-danger">Inactive</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><input type="text" class="form-control" name="planName" value="일시"></td>
-                                        <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
-                                        		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d" selected="selected">Date</option>
-                                        		<option value="y">Y/N</option>
-                                        		<option value="f">File</option>
-                                          		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
-                                        	</select>
-                                        </td>
-                                        <td>
-                                        	<select name="dataTypeDtl" class="form-select">
-                                         		<option value="1">YYYY-MM-DD</option>
-                                        		<option value="2">YYYYMMDD</option>
-                                        		<option value="3">YY-MM-DD</option>
-                                        		<option value="4">YYMMDD</option>
-                                        		<option value="5" selected="selected">YYYY-MM-DD HH:MI:SS</option>
-                                        		<option value="6">YYYY-MM-DD ~ YYYY-MM-DD</option>
-                                        		<option value="7">Year</option>
-                                        		<option value="8">Month</option>
-                                        		<option value="9">day</option>
-                                        	</select>
-                                        <td>
+                                        <td class="center">
                                             <span class="badge bg-success">Active</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td><input type="text" class="form-control" name="planName" value="완료여부"></td>
+                                        <td class="center">3</td>
                                         <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d">Date</option>
-                                        		<option value="y" selected="selected">Y/N</option>
-                                        		<option value="f">File</option>
-                                         		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">슈피겐케이스</option>
+                                        		<option value="n">씨릴</option>
+                                        		<option value="d">슈타인하일</option>
+                                        		<option value="f">파워아크</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                        		<option value="">선택없음</option>
+                                        		<option value="t" selected="selected">기준정보관리</option>
+                                        		<option value="n">씨릴사업팀</option>
+                                        		<option value="d">슈타인하일개발</option>
+                                        		<option value="f">파워악세사리관리</option>
+                                        		<option value="f">모바일케이스개발</option>
                                         	</select>
                                         </td>
                                         <td>
                                         	<select name="dataTypeDtl" class="form-select">
-                                        		<option value="1" selected="selected">완료/미완료</option>
-                                        		<option value="2">예/아니오</option>
-                                        		<option value="3">Y/N</option>
-                                        		<option value="4">첨부/미첨부</option>
-                                        		<option value="5">확인/미확인</option>
-                                        		<option value="6">필요/불필요</option>
+                                        		<option value="1">전체</option>
+                                        		<option value="2">김주식</option>
+                                        		<option value="3" >박혜림</option>
+                                        		<option value="4" selected="selected">김근원</option>
+                                        		<option value="5">정하영</option>
                                         	</select>
-                                        <td>
+                                        <td class="center">
                                             <span class="badge bg-success">Active</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>5</td>
-                                        <td><input type="text" class="form-control" name="planName" value="비고"></td>
+                                        <td class="center">4</td>
                                         <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t" selected="selected">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d">Date</option>
-                                        		<option value="y" >Y/N</option>
-                                        		<option value="f">File</option>
-                                          		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">슈피겐케이스</option>
+                                        		<option value="n">씨릴</option>
+                                        		<option value="d">슈타인하일</option>
+                                        		<option value="f">파워아크</option>
                                         	</select>
                                         </td>
                                         <td>
-                                        	최대 <input type="text" class="form-control" style="width: 100px; display: inline-block;" name="limit" value=""> 자
-                                        <td>
-                                            <span class="badge bg-success">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td><input type="text" class="form-control" name="planName" value="금액"></td>
-                                        <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n">Number</option>
-                                        		<option value="d">Date</option>
-                                        		<option value="y" >Y/N</option>
-                                        		<option value="f">File</option>
-                                        		<option value="c" selected="selected">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">기준정보관리</option>
+                                        		<option value="n">씨릴사업팀</option>
+                                        		<option value="d">슈타인하일개발</option>
+                                        		<option value="f">파워악세사리관리</option>
+                                        		<option value="f">모바일케이스개발</option>
                                         	</select>
                                         </td>
                                         <td>
                                         	<select name="dataTypeDtl" class="form-select">
-                                        		<option value="1" selected="selected">KRW</option>
-                                        		<option value="2">USD</option>
-                                        		<option value="3">JPY</option>
-                                        		<option value="4">EUR</option>
-                                        		<option value="5">기타</option>
+                                        		<option value="1">전체</option>
+                                        		<option value="2" >김주식</option>
+                                        		<option value="3" >박혜림</option>
+                                        		<option value="4" >김근원</option>
+                                        		<option value="5" selected="selected">정하영</option>
                                         	</select>
-                                        <td>
+                                        <td class="center">
                                             <span class="badge bg-success">Active</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>7</td>
-                                        <td><input type="text" class="form-control" name="planName" value="비율"></td>
+                                        <td class="center">5</td>
                                         <td>
-                                        	<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
                                         		<option value="">선택없음</option>
-                                        		<option value="t">Text</option>
-                                        		<option value="n" selected="selected">Number</option>
-                                        		<option value="d">Date</option>
-                                        		<option value="y" >Y/N</option>
-                                        		<option value="f">File</option>
-                                        		<option value="c">Price</option>
-                                        		<option value="e">Etc.</option>
+                                        		<option value="t" selected="selected">슈피겐케이스</option>
+                                        		<option value="n">씨릴</option>
+                                        		<option value="d">슈타인하일</option>
+                                        		<option value="f">파워아크</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                           <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">
+                                        		<option value="">선택없음</option>
+                                        		<option value="t" selected="selected">기준정보관리</option>
+                                        		<option value="n">씨릴사업팀</option>
+                                        		<option value="d">슈타인하일개발</option>
+                                        		<option value="f">파워악세사리관리</option>
+                                        		<option value="f">모바일케이스개발</option>
                                         	</select>
                                         </td>
                                         <td>
                                         	<select name="dataTypeDtl" class="form-select">
-                                        		<option value="1">정수</option>
-                                        		<option value="2">소수</option>
-                                        		<option value="3" selected="selected">비율(%)</option>
+                                        		<option value="1" selected="selected">전체</option>
+                                        		<option value="2" >김주식</option>
+                                        		<option value="3" >박혜림</option>
+                                        		<option value="4" >김근원</option>
+                                        		<option value="5" >정하영</option>
                                         	</select>
-                                        <td>
+                                        <td class="center">
                                             <span class="badge bg-success">Active</span>
                                         </td>
                                     </tr>
@@ -455,33 +426,49 @@
 
     	}  
 
-    	
+    	var count=6;
     	function addRow(flag){
     		
     		var htmlText = '';
 
 	   		htmlText +='<tr class="new">';
-	   		htmlText +='<td>8</td>';
-	   		htmlText +='<td><input type="text" class="form-control" name="planName" value=""></td>';
+	   		
+	   		htmlText +='<tr>';
+	   		htmlText +=' <td class="center">'+count+'</td>';
+	   		htmlText +='<td>';
+	   		htmlText +=' <select name="dataType" class="form-select" onchange="dataTypeSelect(this)">';
+	   		htmlText +='<option value="" selected="selected">선택없음</option>';
+	   		htmlText +='<option value="t" >슈피겐케이스</option>';
+	   		htmlText +='<option value="n">씨릴</option>';
+	   		htmlText +='<option value="d">슈타인하일</option>';
+	   		htmlText +='<option value="f">파워아크</option>';
+	   		htmlText +='</select>';
+	   		htmlText +='</td>';
 	   		htmlText +='<td>';
 	   		htmlText +='<select name="dataType" class="form-select" onchange="dataTypeSelect(this)">';
 	   		htmlText +='<option value="" selected="selected">선택없음</option>';
-	   		htmlText +='<option value="t">Text</option>';
-	        htmlText +='<option value="n">Number</option>';
-	        htmlText +='<option value="d">Date</option>';
-	        htmlText +='<option value="y">Y/N</option>';
-	        htmlText +='<option value="f">File</option>';
-	        htmlText +='<option value="c">Price</option>';
-	        htmlText +='<option value="e">Etc.</option>';
-	        htmlText +='</select>';
-	        htmlText +='</td>';
-	        htmlText +='<td name="chgDetails">';
-	        htmlText +='<td>';
-	        htmlText +='<span class="badge bg-success">Active</span>';
-	        htmlText +='</td>';
-	        htmlText +='</tr>';
+	   		htmlText +='<option value="t">기준정보관리</option>';
+	   		htmlText +='<option value="n">씨릴사업팀</option>';
+	   		htmlText +='<option value="d">슈타인하일개발</option>';
+	   		htmlText +='<option value="f">파워악세사리관리</option>';
+	   		htmlText +='<option value="f">모바일케이스개발</option>';
+	   		htmlText +='</select>';
+	   		htmlText +='</td>';
+	   		htmlText +='<td>';
+	   		htmlText +='<select name="dataTypeDtl" class="form-select">';
+	   		htmlText +='<option value="1" selected="selected">전체</option>';
+	   		htmlText +='<option value="2" >김주식</option>';
+	   		htmlText +='<option value="3" >박혜림</option>';
+	   		htmlText +='<option value="4" >김근원</option>';
+	   		htmlText +='<option value="5">정하영</option>';
+	   		htmlText +='</select>';
+	   		htmlText +=' <td class="center">';
+	   		htmlText +='<span class="badge bg-success">Active</span>';
+	   		htmlText +='</td>';
+	   		htmlText +='</tr>';
 
    			$("#table1").append(htmlText);
+   			count++;
     	}
 
     	function deleteRow(){
