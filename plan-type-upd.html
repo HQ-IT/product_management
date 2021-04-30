@@ -143,15 +143,15 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>제품 일정 유형 수정</h3>
+                            <h3>타입별 Activity 수정</h3>
                             <p class="text-subtitle text-muted">제품 일정 마스터 정보를 관리합니다.</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">데이터 관리</li>
-                                    <li class="breadcrumb-item"><a href="plan-type-list.html">제품 일정 유형 관리</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">제품 일정 유형 수정</li>
+                                    <li class="breadcrumb-item"><a href="plan-type-list.html">타입별 Activity 관리</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">타입별 Activity 수정</li>
                                 </ol>
                             </nav>
                         </div>
@@ -162,16 +162,16 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">* 일정 유형 정보</h4>
+                                    <h4 class="card-title">* 일정 타입 정보</h4>
                                     <div class="row" style="margin-left: 10px; margin-top: 20px">
 									<div class="col-sm-2 form-group">
-									<span>브랜드</span>
-                                       	 <select class="form-select" disabled="disabled">
+									<span>일정 타입</span>
+                                       	 <select class="form-select" onchange="selectBrand(this)" disabled="disabled">
                                             <option value="">선택없음</option>
-                                            <option value="" selected="selected">슈피겐케이스</option>
-                                            <option value="">슈타인하일</option>
-                                            <option value="">씨릴</option>
-                                            <option value="">파워아크</option>
+                                            <option value="1" selected="selected">프로젝트 진행</option>
+                                            <option value="2">제품디자인</option>
+                                            <option value="3">기구설계</option>
+                                            <option value="4">생산일정</option>
                                         </select>
 									</div>
 									<div class="col-sm-2 form-group">
@@ -186,7 +186,7 @@
                                	<hr class="line1">
                                 
                                 <div class="card-content">
-                                <h4 class="card-title">* 유형별 Activities</h4>
+                                <h4 class="card-title">* 타입별 Activities</h4>
                                     <div class="card-body" style="padding: 1rem">
                                         <div class="row">
                                         
@@ -217,8 +217,18 @@
 						                                            <tbody>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="CEO승인">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="CEO승인" selected="selected">CEO승인</option>
+							                                                        <option value="SKU">SKU</option>
+							                                                        <option value="boolean">사양</option>
+							                                                        <option value="디자인">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>						                                                    
+							                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -244,8 +254,17 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="SKU">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="CEO승인" >CEO승인</option>
+							                                                        <option value="SKU" selected="selected">SKU</option>
+							                                                        <option value="boolean">사양</option>
+							                                                        <option value="디자인">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -271,8 +290,17 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="사양">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" selected="selected">사양</option>
+							                                                        <option value="text">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>							                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -298,8 +326,17 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="디자인">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" >사양</option>
+							                                                        <option value="디자인" selected="selected">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>							                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -325,8 +362,18 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="설계">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" >사양</option>
+							                                                        <option value="text" >디자인</option>
+							                                                        <option value="int" selected="selected">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>							                                                    
+							                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -352,8 +399,18 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="BOM">
-						                                                    </td>
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" >사양</option>
+							                                                        <option value="text" >디자인</option>
+							                                                        <option value="int" >설계</option>
+							                                                        <option value="per" selected="selected">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>
+							                                                   </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -379,7 +436,18 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="패키지">
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" >사양</option>
+							                                                        <option value="text" >디자인</option>
+							                                                        <option value="int" >설계</option>
+							                                                        <option value="per" >BOM</option>
+							                                                        <option value="per" selected="selected">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>
+
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
@@ -406,7 +474,17 @@
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="금형">
+						                                                    	 <select class="form-select" name="actSelect">
+							                                                        <option value="" >선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime" >SKU</option>
+							                                                        <option value="boolean" >사양</option>
+							                                                        <option value="text" >디자인</option>
+							                                                        <option value="int" >설계</option>
+							                                                        <option value="per" >BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per"  selected="selected">금형</option>
+							                                                    </select>
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">

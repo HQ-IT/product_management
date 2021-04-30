@@ -142,15 +142,15 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>제품 일정 유형 등록</h3>
+                            <h3>타입별 Activity 등록</h3>
                             <p class="text-subtitle text-muted">일정 타입</p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
                             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">데이터 관리</li>
-                                    <li class="breadcrumb-item"><a href="plan-type-list.html">제품 일정 유형 관리</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">제품 일정 유형 등록</li>
+                                    <li class="breadcrumb-item"><a href="plan-type-list.html">타입별 Activity 관리</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">타입별 Activity 등록</li>
                                 </ol>
                             </nav>
                         </div>
@@ -161,7 +161,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">* 일정 유형 정보</h4>
+                                    <h4 class="card-title">* 일정 타입 정보</h4>
                                     <div class="row" style="margin-left: 10px; margin-top: 20px">
 									<div class="col-sm-2 form-group">
 									<span>일정 타입</span>
@@ -185,7 +185,7 @@
                                	<hr class="line1">
                                 
                                 <div class="card-content">
-                                <h4 class="card-title">* 유형별 Activities</h4>
+                                <h4 class="card-title">* 타입별 Activities</h4>
                                     <div class="card-body" style="padding: 1rem">
                                         <div class="row">
                                         
@@ -226,7 +226,8 @@
 							                                                        <option value="per">BOM</option>
 							                                                        <option value="per">패키지</option>
 							                                                        <option value="per">금형</option>
-							                                                    </select>						                                                    </td>
+							                                                    </select>						                                                    
+							                                                </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -334,7 +335,8 @@
 							                                                        <option value="per">BOM</option>
 							                                                        <option value="per">패키지</option>
 							                                                        <option value="per">금형</option>
-							                                                    </select>							                                                    </td>
+							                                                    </select>							                                                    
+							                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -370,7 +372,8 @@
 							                                                        <option value="per">BOM</option>
 							                                                        <option value="per">패키지</option>
 							                                                        <option value="per">금형</option>
-							                                                    </select>							                                                    </td>
+							                                                    </select>							                                                    
+							                                                  </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect" onchange="pickSubStep(this,'1')">
 							                                                        <option value="">선택없음</option>
@@ -423,21 +426,33 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list2">
 						                                        	<colgroup>
-																		<col width="55%">
-																		<col width="40%">
-																		<col width="15%">
+																		<col width="43%">
+																		<col width="31%">
+																		<col width="17%">
+																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
+						                                                    <th class="center">담당자</th>
 						                                                    <th class="center">sub</th>
 						                                                </tr>
 						                                            </thead>
 						                                            <tbody>
 						                                                <tr onclick="selectRow2(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" name="chk2"  id="basicInput" value="" disabled="disabled">
+						                                                      <select class="form-select" name="actSelect" disabled="disabled">
+							                                                        <option value="" selected="selected">선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime">SKU</option>
+							                                                        <option value="boolean">사양</option>
+							                                                        <option value="text">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect2" onchange="pickSubStep(this,'2')" disabled="disabled">
@@ -450,6 +465,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" disabled="disabled">
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
 						                                                    <td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 2)" disabled="disabled"></td>
 						                                                </tr>
 						                                            </tbody>
@@ -476,21 +501,34 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list3" >
 						                                        	<colgroup>
-																		<col width="55%">
-																		<col width="40%">
-																		<col width="15%">
+																		<col width="43%">
+																		<col width="31%">
+																		<col width="17%">
+																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
+						                                                    <th class="center">담당자</th>
 						                                                    <th class="center">sub</th>
 						                                                </tr>
 						                                            </thead>
 						                                            <tbody>
 						                                                <tr onclick="selectRow3(this)">
 						                                                    <td class="text-bold-500">
-						                                                        <input type="text" class="form-control" id="basicInput" value="" disabled="disabled">
+						                                                      <select class="form-select" name="actSelect" disabled="disabled">
+							                                                        <option value="" selected="selected">선택없음</option>
+							                                                        <option value="date" >CEO승인</option>
+							                                                        <option value="datetime">SKU</option>
+							                                                        <option value="boolean">사양</option>
+							                                                        <option value="text">디자인</option>
+							                                                        <option value="int">설계</option>
+							                                                        <option value="per">BOM</option>
+							                                                        <option value="per">패키지</option>
+							                                                        <option value="per">금형</option>
+							                                                    </select>
+
 						                                                    </td>
 						                                                    <td>
 						                                                    	 <select class="form-select" id="basicSelect3" onchange="pickSubStep(this,'3')" disabled="disabled">
@@ -503,6 +541,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                                                    <td>
+						                                                    	<select class="form-select" name="manager" disabled="disabled">
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>						                                                    
 						                                                    <td><input class="form-check-input" type="checkbox" name="chk3" onclick="checkSubStep(this, 3)" disabled="disabled"></td>
 						                                                </tr>
 						                                            </tbody>
@@ -559,9 +607,19 @@ function addRow(flag){
 	var htmlText = '';
 
 	if(flag=="1"){
-		htmlText +='<tr>';
+		htmlText +='<tr onclick="selectRow1(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='<select class="form-select" name="actSelect">';
+		htmlText +='<option value="" selected="selected">선택없음</option>';
+		htmlText +='<option value="date" >CEO승인</option>';
+		htmlText +='<option value="datetime">SKU</option>';
+		htmlText +='<option value="boolean">사양</option>';
+		htmlText +='<option value="text">디자인</option>';
+		htmlText +='<option value="int">설계</option>';
+		htmlText +='<option value="per">BOM</option>';
+		htmlText +='<option value="per">패키지</option>';
+		htmlText +='<option value="per">금형</option>';
+		htmlText +='</select>';						                                                    
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,1)">';
@@ -576,22 +634,33 @@ function addRow(flag){
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" name="manager" >';
-		htmlText +=' <option value="">선택</option>';
+		htmlText +='<option value="">선택</option>';
 		htmlText +='<option value="date">팀 전체</option>';
 		htmlText +='<option value="datetime">김주식</option>';
-    	htmlText +='<option value="boolean">박혜림</option>';
-    	htmlText +='<option value="text">김근원</option>';
-    	htmlText +='<option value="int">정하영</option>';
-    	htmlText +='</select>';
-		htmlText +=' </td>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
 		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>';
-		htmlText +='</tr>';		
+		htmlText +='</tr>';
+    
 
 		$("#list-home-list1").append(htmlText);
 	}else if(flag=="2"){
 		htmlText +='<tr onclick="selectRow2(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='<select class="form-select" name="actSelect">';
+		htmlText +='<option value="" selected="selected">선택없음</option>';
+		htmlText +='<option value="date" >CEO승인</option>';
+		htmlText +='<option value="datetime">SKU</option>';
+		htmlText +='<option value="boolean">사양</option>';
+		htmlText +='<option value="text">디자인</option>';
+		htmlText +='<option value="int">설계</option>';
+		htmlText +='<option value="per">BOM</option>';
+		htmlText +='<option value="per">패키지</option>';
+		htmlText +='<option value="per">금형</option>';
+		htmlText +='</select>';						                                                    
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,2)">';
@@ -604,14 +673,34 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
-		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
-		htmlText +='</tr>';		
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
+		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
+		htmlText +='</tr>';	
 
 		$("#list-home-list2").append(htmlText);
 	}else if(flag=="3"){
-		htmlText +='<tr onclick="selectRow3(this)">';
+		htmlText +='<tr onclick="selectRow2(this)">';
 		htmlText +='<td class="text-bold-500">';
-		htmlText +='<input type="text" class="form-control" id="basicInput" value="">';
+		htmlText +='<select class="form-select" name="actSelect">';
+		htmlText +='<option value="" selected="selected">선택없음</option>';
+		htmlText +='<option value="date" >CEO승인</option>';
+		htmlText +='<option value="datetime">SKU</option>';
+		htmlText +='<option value="boolean">사양</option>';
+		htmlText +='<option value="text">디자인</option>';
+		htmlText +='<option value="int">설계</option>';
+		htmlText +='<option value="per">BOM</option>';
+		htmlText +='<option value="per">패키지</option>';
+		htmlText +='<option value="per">금형</option>';
+		htmlText +='</select>';						                                                    
 		htmlText +='</td>';
 		htmlText +='<td>';
 		htmlText +='<select class="form-select" id="basicSelect" onchange="pickSubStep(this,3)">';
@@ -624,7 +713,17 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
-		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';
+		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
 		htmlText +='</tr>';		
 
 		$("#list-home-list3").append(htmlText);
@@ -710,12 +809,14 @@ function checkSubStep(obj, flag){
 			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",false);
 			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",false);
 			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",false);
+			$('#list-home-list2').children().eq(2).children().eq(0).children().eq(3).children().eq(0).prop("disabled",false);
 			$('#minusBtn2').prop("disabled",false);
 			$('#plusBtn2').prop("disabled",false);
 		}else if(flag=="2"){
 			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(0).children().eq(0).prop("disabled",false);
 			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(1).children().eq(0).prop("disabled",false);
 			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(2).children().eq(0).prop("disabled",false);
+			$('#list-home-list3').children().eq(2).children().eq(0).children().eq(3).children().eq(0).prop("disabled",false);
 			$('#minusBtn3').prop("disabled",false);
 			$('#plusBtn3').prop("disabled",false);
 		}else if(flag=="3"){
