@@ -61,6 +61,8 @@ ul li{
     border-radius: 3px;
     padding: 5px;
     margin-top: 5px;
+    z-index:100;
+    position: relative;	    
 }
 .submenu-item{
     padding: 5px;
@@ -145,7 +147,7 @@ table{
                         <i class="bi bi-stack"></i>
                         <span>데이터 관리</span>
                     </a>
- 					<ul class="submenu " style="display: none;">
+                    <ul class="submenu " style="display: none;">
                         <li class="submenu-item ">
                             <a href="type-master-mgr.html">일정 타입 관리</a>
                         </li>
@@ -172,7 +174,6 @@ table{
                         <span>설정</span>
                     </a>
                 </li>
-                
             </ul>
         </div>
         <div id="main">
@@ -329,7 +330,7 @@ table{
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인<span class="info"><br>(2021-04-27)</span></button>
                                                                     <button type="button" class="btn btn-success btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"></span></button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">사양</button>
-                                                                    <button type="button" class="btn btn-outline-dark btn-status">디자인</button>
+                                                                    <button type="button" class="btn btn-outline-dark btn-status" style="border: solid 3px black;">디자인</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">설계</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
@@ -348,7 +349,7 @@ table{
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"><br>(2021-04-05)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">사양<span class="info"><br>(2021-04-10)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">디자인<span class="info"><br>(2021-04-20)</span></button>
-                                                                    <button type="button" class="btn btn-danger btn-status" style="opacity: 0.7;">설계<span class="info"><br>(2021-04-25)</span></button>
+                                                                    <button type="button" class="btn btn-danger btn-status" style="opacity: 0.7;">샘플1<span class="info"><br>(2021-04-25)</span></button>
                                                                     <button type="button" class="btn btn-success btn-status">BOM</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">금형</button>
@@ -364,7 +365,7 @@ table{
                                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인<span class="info"><br>(2021-03-10)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"><br>(2021-03-15)</span></button>
-                                                                    <button type="button" class="btn btn-outline-secondary btn-status">디자인<span class="info"><br>(2021-03-20)</span></button>
+                                                                    <button type="button" class="btn btn-outline-secondary btn-status" style="border: solid 3px black;">디자인<span class="info"><br>(2021-03-20)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">사양<span class="info"><br>(2021-03-25)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">설계<span class="info"><br>(2021-03-30)</span></button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">BOM<span class="info"><br>(2021-04-05)</span></button>
@@ -384,7 +385,7 @@ table{
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인</button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU</button>
                                                                     <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                    <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
+                                                                    <button type="button" class="btn btn-outline-secondary btn-status" style="border: solid 3px black;">디자인</button>
                                                                     <button type="button" class="btn btn-success btn-status">설계</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
                                                                     <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
@@ -439,7 +440,7 @@ table{
                                                                 <button type="button" class="btn btn-outline-secondary btn-status" data-bs-toggle="modal" data-bs-target="#large1">CEO 승인<span class="info"><br>(2021-04-27)</span></button>
                                                                 <button type="button" class="btn btn-success btn-status" data-bs-toggle="modal" data-bs-target="#large">SKU<span class="info"></span></button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">사양</button>
-                                                                <button type="button" class="btn btn-outline-dark btn-status">디자인</button>
+                                                                <button type="button" class="btn btn-outline-dark btn-status" style="border: solid 3px black;">디자인</button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">설계</button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
@@ -456,7 +457,7 @@ table{
                                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인<span class="info"><br>(2021-03-10)</span></button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">SKU<span class="info"><br>(2021-03-15)</span></button>
-                                                                <button type="button" class="btn btn-outline-secondary btn-status">디자인<span class="info"><br>(2021-03-20)</span></button>
+                                                                <button type="button" class="btn btn-outline-secondary btn-status" style="border: solid 3px black;">디자인<span class="info"><br>(2021-03-20)</span></button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">사양<span class="info"><br>(2021-03-25)</span></button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">설계<span class="info"><br>(2021-03-30)</span></button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">BOM<span class="info"><br>(2021-04-05)</span></button>
@@ -476,7 +477,7 @@ table{
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">CEO 승인</button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">SKU</button>
                                                                 <button type="button" class="btn btn-outline-secondary btn-status">사양</button>
-                                                                <button type="button" class="btn btn-outline-secondary btn-status">디자인</button>
+                                                                <button type="button" class="btn btn-outline-secondary btn-status" style="border: solid 3px black;">디자인</button>
                                                                 <button type="button" class="btn btn-success btn-status">설계</button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">BOM</button>
                                                                 <button type="button" class="btn btn-outline-dark btn-status">패키지</button>
