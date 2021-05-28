@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+  	<link rel="stylesheet" href="assets/css/jquery-ui.css">
 
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" >
  	<style>
 	#main{
 	    margin-left: 0px;
@@ -137,7 +138,6 @@
                     <i class="bi bi-justify fs-3"></i>
                 </a>
             </header>
-
             <div class="page-heading">
                 <div class="page-title">
                     <div class="row">
@@ -160,15 +160,21 @@
                         <div class="card-body">
                             <table class="table table-striped" id="table1">
                    				<colgroup>
-									<col width="15%">
-									<col width="40%">
-									<col width="25%">
+									<col width="10%">
 									<col width="20%">
+									<col width="15%">
+									<col width="15%">
+									<col width="15%">
+									<col width="10%">
+									<col width="15%">
 								</colgroup>
                                 <thead>
                                     <tr>
                                         <th class="center">코드</th>
                                         <th class="center">타입명</th>
+                                        <th class="center">구분</th>
+                                        <th class="center">브랜드</th>
+                                        <th class="center">모델</th>
                                         <th class="center">등록자</th>
                                         <th class="center">등록일자</th>
                                     </tr>
@@ -177,30 +183,227 @@
                                     <tr>
                                         <td class="center"><input type="text" class="form-control" name="planName" value="Type001"></td>
                                         <td class="center"><input type="text" class="form-control" name="planName" value="프로젝트 진행"></td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option selected="selected">Main</option>
+                                        		<option>Sub</option>
+                                        	</select>
+                                        </td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>
                                         <td  class="center">홍길동</td>
                                         <td  class="center">2021-01-12</td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" class="form-control" name="planName" value="Type002"></td>
                                         <td><input type="text" class="form-control" name="planName" value="제품디자인"></td>
+                                         <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>Main</option>
+                                        		<option selected="selected">Sub</option>
+                                        	</select>
+                                        </td>                                  
+                                      <td  class="center">
+                                        	<select class="form-select">
+                                        	    <option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>                                                                             
                                         <td  class="center">홍길동</td>
                                         <td  class="center">2021-01-12</td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" class="form-control" name="planName" value="Type003"></td>
                                         <td><input type="text" class="form-control" name="planName" value="기구설계"></td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>Main</option>
+                                        		<option selected="selected">Sub</option>
+                                        	</select>
+                                        </td>                                   
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        	    <option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td> 
+                                         <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>                                       
                                         <td  class="center">홍길동</td>
                                         <td  class="center">2021-01-12</td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" class="form-control" name="planName" value="Type004"></td>
                                         <td><input type="text" class="form-control" name="planName" value="제품스펙"></td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>Main</option>
+                                        		<option selected="selected">Sub</option>
+                                        	</select>
+                                        </td>                                     
+                                      <td  class="center">
+                                        	<select class="form-select">
+                                        	    <option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td>      
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>                                                                           
                                         <td  class="center">홍길동</td>
                                         <td  class="center">2021-01-12</td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" class="form-control" name="planName" value="Type005"></td>
                                         <td><input type="text" class="form-control" name="planName" value="생산일정 "></td>
+                                          <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>Main</option>
+                                        		<option selected="selected">Sub</option>
+                                        	</select>
+                                        </td>                                     
+                                         <td  class="center">
+                                        	<select class="form-select">
+                                        	    <option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td> 
+                                         <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>                                                                          
+                                        <td  class="center">홍길동</td>
+                                        <td  class="center">2021-01-12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center"><input type="text" class="form-control" name="planName" value="Type006"></td>
+                                        <td class="center"><input type="text" class="form-control" name="planName" value="프로젝트 진행_파워아크"></td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option selected="selected">Main</option>
+                                        		<option>Sub</option>
+                                        	</select>
+                                        </td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option selected="selected">PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>
+                                        </td>
+                                        <td  class="center">
+                                        	<select class="form-select">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
+                                        </td>
                                         <td  class="center">홍길동</td>
                                         <td  class="center">2021-01-12</td>
                                     </tr>
@@ -222,10 +425,18 @@
     </div>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  	<script src="assets/js/bootstrap-multiselect.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
-    <script>
+    <script th:inline="javascript">
+    $(document).ready(function(){
+    	
+        $('#brand').multiselect({
+        	includeSelectAllOption: true
+          });
+    });
         // Simple Datatable
         let table1 = document.querySelector('#table1');
         //let dataTable = new simpleDatatables.DataTable(table1);
@@ -289,7 +500,6 @@
 			}
     		
    			$(obj).parent().next().html(htmlText);
-
     	}  
 
     	function addRow(flag){
@@ -319,7 +529,6 @@
     	}
     </script>
 
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

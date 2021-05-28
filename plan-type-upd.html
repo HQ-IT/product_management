@@ -538,14 +538,16 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list2">
 						                                        	<colgroup>
-																		<col width="55%">
-																		<col width="40%">
-																		<col width="15%">
+																		<col width="43%">
+																		<col width="31%">
+																		<col width="17%">
+																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
+						                                                    <th class="center">담당자</th>
 						                                                    <th class="center">sub</th>
 						                                                </tr>
 						                                            </thead>
@@ -565,6 +567,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                    						        <td>
+						                                                    	<select class="form-select" name="manager" disabled="disabled">
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime" selected="selected">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td>                                
 						                                                    <td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 2)" disabled="disabled"></td>
 						                                                </tr>
 						                                            </tbody>
@@ -591,14 +603,16 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list3" >
 						                                        	<colgroup>
-																		<col width="55%">
-																		<col width="40%">
-																		<col width="15%">
+																		<col width="43%">
+																		<col width="31%">
+																		<col width="17%">
+																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
+						                                                    <th class="center">담당자</th>
 						                                                    <th class="center">sub</th>
 						                                                </tr>
 						                                            </thead>
@@ -618,6 +632,16 @@
 							                                                        <option value="per">비율</option>
 							                                                    </select>
 						                                                    </td>
+						                    						        <td>
+						                                                    	<select class="form-select" name="manager" disabled="disabled">
+							                                                        <option value="">선택</option>
+							                                                        <option value="date">팀 전체</option>
+							                                                        <option value="datetime" selected="selected">김주식</option>
+							                                                        <option value="boolean">박혜림</option>
+							                                                        <option value="text">김근원</option>
+							                                                        <option value="int">정하영</option>
+							                                                    </select>
+						                                                    </td> 						                                                    
 						                                                    <td><input class="form-check-input" type="checkbox" name="chk3" onclick="checkSubStep(this, 3)" disabled="disabled"></td>
 						                                                </tr>
 						                                            </tbody>
@@ -678,6 +702,16 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>';
 		htmlText +='</tr>';		
 
@@ -698,6 +732,16 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';		
 
@@ -718,6 +762,16 @@ function addRow(flag){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
 		htmlText +='</tr>';		
 
@@ -767,6 +821,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';	
 		
@@ -791,6 +855,16 @@ function selectRow1(obj){
 		htmlText2 +='<option value="per">비율</option>';
 		htmlText2 +='</select>';
 		htmlText2 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText2 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 3)" disabled="disabled"></td>';
 		htmlText2 +='</tr>';
 		
@@ -817,6 +891,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';		
 		
@@ -835,6 +919,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';
 		
@@ -853,6 +947,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';	
 		
@@ -871,6 +975,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';		
 		
@@ -889,6 +1003,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" checked="checked"></td>';
 		htmlText +='</tr>';		
 
@@ -912,6 +1036,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
 		htmlText +='</tr>';	
 		
@@ -930,6 +1064,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
 		htmlText +='</tr>';		
 		
@@ -948,6 +1092,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk3" type="checkbox" onclick="checkSubStep(this, 3)" ></td>';
 		htmlText +='</tr>';		
 
@@ -977,6 +1131,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';		
 		
@@ -995,6 +1159,16 @@ function selectRow1(obj){
 		htmlText +='<option value="per">비율</option>';
 		htmlText +='</select>';
 		htmlText +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText +='<td><input class="form-check-input" name="chk2" type="checkbox" onclick="checkSubStep(this, 2)" ></td>';
 		htmlText +='</tr>';
 		
@@ -1020,6 +1194,16 @@ function selectRow1(obj){
 		htmlText2 +='<option value="per">비율</option>';
 		htmlText2 +='</select>';
 		htmlText2 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText2 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 3)" disabled="disabled"></td>';
 		htmlText2 +='</tr>';
 		
@@ -1046,6 +1230,16 @@ function selectRow1(obj){
 		htmlText1 +='<option value="per">비율</option>';
 		htmlText1 +='</select>';
 		htmlText1 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText1 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 2)" disabled="disabled"></td>';
 		htmlText1 +='</tr>';
 		
@@ -1066,6 +1260,16 @@ function selectRow1(obj){
 		htmlText2 +='<option value="per">비율</option>';
 		htmlText2 +='</select>';
 		htmlText2 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText2 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 3)" disabled="disabled"></td>';
 		htmlText2 +='</tr>';
 		
@@ -1095,6 +1299,16 @@ function selectRow1(obj){
 		htmlText1 +='<option value="per">비율</option>';
 		htmlText1 +='</select>';
 		htmlText1 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText1 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 2)"></td>';
 		htmlText1 +='</tr>';
 		
@@ -1115,6 +1329,16 @@ function selectRow1(obj){
 		htmlText2 +='<option value="per">비율</option>';
 		htmlText2 +='</select>';
 		htmlText2 +='</td>';
+		htmlText +='<td>';
+		htmlText +='<select class="form-select" name="manager" >';
+		htmlText +='<option value="">선택</option>';
+		htmlText +='<option value="date">팀 전체</option>';
+		htmlText +='<option value="datetime">김주식</option>';
+		htmlText +='<option value="boolean">박혜림</option>';
+		htmlText +='<option value="text">김근원</option>';
+		htmlText +='<option value="int">정하영</option>';
+		htmlText +='</select>';
+		htmlText +='</td>';		
 		htmlText2 +='<td><input class="form-check-input" type="checkbox" onclick="checkSubStep(this, 3)" disabled="disabled"></td>';
 		htmlText2 +='</tr>';
 		
