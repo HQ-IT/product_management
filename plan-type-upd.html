@@ -174,14 +174,38 @@
                                             <option value="4">생산일정</option>
                                         </select>
 									</div>
-									<div class="col-sm-2 form-group">
-										<span>리비전</span>
-										<input type="text" class="form-control" id="planName" value="v1" disabled="disabled">
+									<div class="col-sm-3 form-group">
+										<span>브랜드</span>
+                                        	<select class="form-select" disabled="disabled">
+                                        		<option>N/A</option>
+                                        		<option selected="selected">Spigen</option>
+                                        		<option>GoSelly</option>
+                                        		<option>Caseology</option>
+                                        		<option>PowerArc</option>
+                                        		<option>PowerArc</option>
+                                        		<option>Gearlock</option>
+                                        		<option>CYRILL</option>
+                                        		<option>Ciel by CYRILL</option>
+                                        		<option>Goods Materials</option>
+                                        		<option>Essential</option>
+                                        		<option>Rael</option>
+                                        		<option>Mannhart</option>
+                                        	</select>									
+                                       </div>	
+									<div class="col-sm-3 form-group">
+										<span>모델</span>
+                                        	<select class="form-select" disabled="disabled">
+                                        		<option>N/A</option>
+                                        		<option>TR슬림</option>
+                                        		<option>러기드아머</option>
+                                        		<option>레더핏</option>
+                                        		<option>울트라하이브리드</option>
+                                        	</select>
 									</div>	
 									<div class="col-sm-4 form-group">
 										<span>비고</span>
 										<input type="text" class="form-control" id="planName" value="베이직" >
-									</div>	
+									</div>
                                 </div>
                                	<hr class="line1">
                                 
@@ -201,13 +225,15 @@
 						                                    <div class="table-responsive">
 						                                        <table class="table table-bordered mb-0" id="list-home-list1">
 						                                        	<colgroup>
-																		<col width="43%">
-																		<col width="31%">
+																		<col width="21%">
+																		<col width="32%">
+																		<col width="22%">
 																		<col width="17%">
 																		<col width="8%">
 																	</colgroup>
 						                                            <thead>
 						                                                <tr class="head-color">
+						                                                    <th class="center">구분</th>
 						                                                    <th class="center">항목명</th>
 						                                                    <th class="center">타입</th>
 						                                                    <th class="center">담당자</th>
@@ -216,6 +242,12 @@
 						                                            </thead>
 						                                            <tbody>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -253,6 +285,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" checked="checked"></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -289,6 +327,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" checked="checked"></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -325,6 +369,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -361,6 +411,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" checked="checked"></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -398,6 +454,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -435,6 +497,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -473,6 +541,12 @@
 						                                                    <td><input class="form-check-input" name="chk1" type="checkbox" onclick="checkSubStep(this, 1)" ></td>
 						                                                </tr>
 						                                                <tr onclick="selectRow1(this)">
+						                                                	<td>
+						                                                		<select class="form-select" onchange="selectType(this)">
+						                                                			<option value="a" selected="selected">Activity</option>
+						                                                			<option value="t">Type</option>
+						                                                		</select>
+						                                                	</td>						                                                
 						                                                    <td class="text-bold-500">
 						                                                    	 <select class="form-select" name="actSelect">
 							                                                        <option value="" >선택없음</option>
@@ -803,7 +877,7 @@ function selectRow1(obj){
 	}
 	currentSelector = obj;
 	
-	if($(obj).children().eq(0).children().eq(0).val()=="CEO승인"){
+	if($(obj).children().eq(1).children().eq(0).val()=="CEO승인"){
 		var htmlText = '';
 		
 		htmlText +='<tr onclick="selectRow2(this)">';
@@ -873,7 +947,7 @@ function selectRow1(obj){
 		$('#plusBtn3').prop("disabled",true);
 		$('#minusBtn3').prop("disabled",true);
 		
-	}else if($(obj).children().eq(0).children().eq(0).val()=="SKU"){
+	}else if($(obj).children().eq(1).children().eq(0).val()=="SKU"){
 		var htmlText = '';
 		
 		htmlText +='<tr onclick="selectRow2(this)">';
@@ -1113,7 +1187,7 @@ function selectRow1(obj){
 		$('#plusBtn3').prop("disabled",false);
 		$('#minusBtn3').prop("disabled",false);
 		
-	}else if($(obj).children().eq(0).children().eq(0).val()=="디자인"){
+	}else if($(obj).children().eq(1).children().eq(0).val()=="디자인"){
 		var htmlText = '';
 		
 		htmlText +='<tr onclick="selectRow2(this)">';
